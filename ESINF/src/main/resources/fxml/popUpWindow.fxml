@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="724.0" styleClass="body_background" stylesheets="@../SyteSheet/stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Screens.PopUpWindowGUI">
+   <top>
+      <VBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="660.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="title" text="Functionatily" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" />
+               </VBox.margin>
+            </Label>
+         </children></VBox>
+   </top>
+   <center>
+      <ScrollPane fx:id="scrollPane" prefHeight="297.0" prefWidth="517.0" styleClass="body_background" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="282.0" prefWidth="501.0" styleClass="body_background">
+               <children>
+                  <Text fx:id="info" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text to be displayed" />
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+   <left>
+      <HBox alignment="CENTER" prefHeight="297.0" prefWidth="221.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="image" fitHeight="203.0" fitWidth="206.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Watering_Plan_Data.png" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="297.0" prefWidth="46.0" />
+         </children>
+      </HBox>
+   </left>
+</BorderPane>

@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="770.0" maxWidth="1300.0" minHeight="770.0" minWidth="1300.0" prefHeight="770.0" prefWidth="1300.0" styleClass="body_background" stylesheets="@../../SyteSheet/stylesheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Screens.MainPageGUI">
+   <top>
+      <VBox alignment="CENTER" minWidth="350.0" prefHeight="65.0" prefWidth="350.0" stylesheets="@../../SyteSheet/stylesheet.css" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="103.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="hBoxBar" alignment="CENTER" prefHeight="0.0" prefWidth="350.0">
+               <children>
+                  <HBox maxHeight="10.0" maxWidth="1920.0" minHeight="4.0" minWidth="300.0" prefWidth="1200.0" styleClass="separator_color" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="68.0" prefWidth="329.0">
+               <children>
+                  <HBox fx:id="hBoxLeft" prefHeight="58.0" prefWidth="24.0" />
+                  <Button fx:id="btProfile" mnemonicParsing="false" styleClass="transparent_button">
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/ProfileIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <HBox fx:id="hBoxVert1" alignment="CENTER" prefHeight="68.0" prefWidth="40.0">
+                     <children>
+                        <HBox prefHeight="77.0" prefWidth="3.0" styleClass="separator_color">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+                  <Button fx:id="btHome" mnemonicParsing="false" styleClass="transparent_button">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/HomeIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <HBox fx:id="hBoxVert2" alignment="CENTER" prefHeight="68.0" prefWidth="40.0">
+                     <children>
+                        <HBox prefHeight="72.0" prefWidth="4.0" styleClass="separator_color">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+                  <Button fx:id="btSettings" mnemonicParsing="false" styleClass="transparent_button">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/SettingsIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <HBox fx:id="hBoxRight" prefHeight="68.0" prefWidth="24.0" />
+               </children>
+            </HBox>
+            <HBox fx:id="hBoxBar1" prefHeight="0.0" prefWidth="329.0" />
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="441.0" prefWidth="329.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="72.0" prefWidth="350.0">
+               <children>
+                  <Label text="Data In System" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="164.0" prefWidth="350.0" styleClass="body_background">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="144.0" prefWidth="1298.0" styleClass="body_background">
+                           <children>
+                              <VBox fx:id="vBoxDistributionNetworkData" alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0" styleClass="data-box">
+                                 <children>
+                                    <HBox alignment="TOP_CENTER" prefHeight="86.0" prefWidth="140.0">
+                                       <children>
+                                          <ImageView fitHeight="92.0" fitWidth="241.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../Images/Distribution_Network_Data.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets bottom="2.0" left="2.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Button fx:id="btDotsDistributionNetwork" mnemonicParsing="false" prefHeight="30.0" prefWidth="26.0" styleClass="transparent_button">
+                                             <graphic>
+                                                <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../Images/Horizontal_Dots.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <Label prefHeight="96.0" prefWidth="81.0" text="Distribution&#10;  Network" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox fx:id="vBoxProductsData" alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0" styleClass="data-box">
+                                 <children>
+                                    <HBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0">
+                                       <children>
+                                          <ImageView fitHeight="101.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../Images/Products_Data.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets bottom="2.0" left="2.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Button fx:id="btDotsProducts" mnemonicParsing="false" prefHeight="30.0" prefWidth="26.0" styleClass="transparent_button">
+                                             <graphic>
+                                                <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../Images/Horizontal_Dots.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <Label text="Products" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox fx:id="vBoxWateringPlanData" alignment="TOP_CENTER" prefHeight="134.0" prefWidth="139.0" styleClass="data-box">
+                                 <children>
+                                    <HBox alignment="TOP_CENTER" prefHeight="108.0" prefWidth="138.0">
+                                       <children>
+                                          <ImageView fitHeight="89.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../Images/Watering_Plan_Data.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets bottom="2.0" left="2.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Button fx:id="btDotsWateringPlan" mnemonicParsing="false" prefHeight="30.0" prefWidth="26.0" styleClass="transparent_button">
+                                             <graphic>
+                                                <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../Images/Horizontal_Dots.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <Label text="Watering Plan" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="39.0" prefWidth="1298.0" styleClass="body_background" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="66.0" prefWidth="350.0">
+               <children>
+                  <Label text="Functionalities" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="292.0" prefWidth="1300.0" styleClass="body_background">
+               <children>
+                  <ScrollPane fx:id="scrollPaneMain" fitToWidth="true" prefHeight="227.0" prefWidth="350.0" styleClass="body_background" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox prefHeight="290.0" prefWidth="1298.0" styleClass="body_background">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="126.0" prefWidth="1285.0">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" prefHeight="125.0" prefWidth="127.0" styleClass="box">
+                                       <children>
+                                          <HBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0">
+                                             <children>
+                                                <Button fx:id="btLoadData" mnemonicParsing="false" prefHeight="91.0" prefWidth="103.0">
+                                                   <graphic>
+                                                      <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Load_Data_Func.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <styleClass>
+                                                      <String fx:value="transparent_button" />
+                                                      <String fx:value="image_button" />
+                                                   </styleClass>
+                                                </Button>
+                                                <Button fx:id="btDotsLoadData" mnemonicParsing="false" prefHeight="30.0" prefWidth="26.0" styleClass="transparent_button">
+                                                   <graphic>
+                                                      <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Horizontal_Dots.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Load Data" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0" styleClass="box">
+                                       <children>
+                                          <HBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0">
+                                             <children>
+                                                <Button fx:id="btMostDistantPoints" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="72.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Most_Distant_Points_Func.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <styleClass>
+                                                      <String fx:value="transparent_button" />
+                                                      <String fx:value="image_button" />
+                                                   </styleClass>
+                                                </Button>
+                                                <Button fx:id="btDotsMostDistantPoints" mnemonicParsing="false" prefHeight="30.0" prefWidth="26.0" styleClass="transparent_button">
+                                                   <graphic>
+                                                      <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Horizontal_Dots.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="96.0" prefWidth="95.0" text="Most Distant&#10;     Points" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0" styleClass="box">
+                                       <children>
+                                          <HBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0">
+                                             <children>
+                                                <Button fx:id="btDefineNHubs" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="76.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Define_N_Hubs_Func.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <styleClass>
+                                                      <String fx:value="transparent_button" />
+                                                      <String fx:value="image_button" />
+                                                   </styleClass>
+                                                </Button>
+                                                <Button fx:id="btDotsDefineNHubs" mnemonicParsing="false" prefHeight="30.0" prefWidth="26.0" styleClass="transparent_button">
+                                                   <graphic>
+                                                      <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Horizontal_Dots.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="96.0" prefWidth="70.0" text="Define N&#10;    Hubs" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0" styleClass="box">
+                                       <children>
+                                          <HBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0">
+                                             <children>
+                                                <Button fx:id="btNearestHub" mnemonicParsing="false" prefWidth="152.0">
+                                                   <graphic>
+                                                      <ImageView fitHeight="71.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Nearest_Point_Func.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <styleClass>
+                                                      <String fx:value="transparent_button" />
+                                                      <String fx:value="image_button" />
+                                                   </styleClass>
+                                                </Button>
+                                                <Button fx:id="btDotsNearestHub" mnemonicParsing="false" prefHeight="30.0" prefWidth="26.0" styleClass="transparent_button">
+                                                   <graphic>
+                                                      <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Horizontal_Dots.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Nearest Hub" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="152.0" styleClass="box">
+                                       <children>
+                                          <HBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0">
+                                             <children>
+                                                <Button fx:id="btConnectedNetwork" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="69.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Connected_Network_Func.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <styleClass>
+                                                      <String fx:value="transparent_button" />
+                                                      <String fx:value="image_button" />
+                                                   </styleClass>
+                                                </Button>
+                                                <Button fx:id="btDotsConnectedNetwork" mnemonicParsing="false" prefHeight="30.0" prefWidth="26.0" styleClass="transparent_button">
+                                                   <graphic>
+                                                      <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Horizontal_Dots.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="96.0" prefWidth="80.0" text="Connected&#10;  Network&#10;" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0" styleClass="box">
+                                       <children>
+                                          <HBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0">
+                                             <children>
+                                                <Button fx:id="btWateringController" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="90.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Watering_Controller_Func.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <styleClass>
+                                                      <String fx:value="transparent_button" />
+                                                      <String fx:value="image_button" />
+                                                   </styleClass>
+                                                </Button>
+                                                <Button fx:id="btDotsWateringController" mnemonicParsing="false" prefHeight="30.0" prefWidth="26.0" styleClass="transparent_button">
+                                                   <graphic>
+                                                      <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Horizontal_Dots.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="96.0" prefWidth="80.0" text="Watering&#10;Controller&#10;" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0" styleClass="box">
+                                       <children>
+                                          <HBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0">
+                                             <children>
+                                                <Button fx:id="btDispatchList" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="90.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/simple_dispatched_list.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <styleClass>
+                                                      <String fx:value="transparent_button" />
+                                                      <String fx:value="image_button" />
+                                                   </styleClass>
+                                                </Button>
+                                                <Button fx:id="btDotsDispatchList" mnemonicParsing="false" prefHeight="30.0" prefWidth="26.0" styleClass="transparent_button">
+                                                   <graphic>
+                                                      <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Horizontal_Dots.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="96.0" prefWidth="80.0" text="  Dispath &#10;Simple List&#10;" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="126.0" prefWidth="1285.0">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0" styleClass="box">
+                                       <children>
+                                          <HBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0">
+                                             <children>
+                                                <Button fx:id="btExpeditionListMinimizedPath" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="67.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Shortest_Route.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <styleClass>
+                                                      <String fx:value="transparent_button" />
+                                                      <String fx:value="image_button" />
+                                                   </styleClass>
+                                                </Button>
+                                                <Button fx:id="btDotsExpeditionListMinimizedPath" mnemonicParsing="false" prefHeight="30.0" prefWidth="26.0" styleClass="transparent_button">
+                                                   <graphic>
+                                                      <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Horizontal_Dots.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="96.0" prefWidth="105.0" text="Dispatch List&#10;   Min Path&#10;" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0" styleClass="box">
+                                       <children>
+                                          <HBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="130.0">
+                                             <children>
+                                                <Button fx:id="btCalculateStatistics" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="90.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/statistics.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <styleClass>
+                                                      <String fx:value="transparent_button" />
+                                                      <String fx:value="image_button" />
+                                                   </styleClass>
+                                                </Button>
+                                                <Button fx:id="btDotsCalculateStatistics" mnemonicParsing="false" prefHeight="30.0" prefWidth="26.0" styleClass="transparent_button">
+                                                   <graphic>
+                                                      <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../Images/Horizontal_Dots.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="96.0" prefWidth="73.0" text="Calculate&#10;Statistics&#10;" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

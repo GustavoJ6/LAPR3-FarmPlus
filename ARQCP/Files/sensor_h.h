@@ -1,0 +1,7 @@
+#include "gen_sens_temp.h"
+#include "gen_sens_velc_vento.h"
+#include "gen_sens_dir_vento.h"
+#include "gen_sens_humd_atm.h"
+#include "gen_sens_humd_solo.h"
+#include "gen_sens_pluvio.h"
+#include "pcg.h"

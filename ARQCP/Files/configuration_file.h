@@ -1,0 +1,1 @@
+int configuration_file(unsigned long *frequencies, int *sensor_amounts);

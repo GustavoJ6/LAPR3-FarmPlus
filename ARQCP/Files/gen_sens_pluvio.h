@@ -1,0 +1,1 @@
+unsigned char gen_sens_pluvio(unsigned char ult_pluvio, char ult_temp);

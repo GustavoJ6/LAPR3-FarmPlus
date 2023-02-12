@@ -1,0 +1,1 @@
+unsigned short gen_sens_dir_vento(unsigned short ult_dir_vento);

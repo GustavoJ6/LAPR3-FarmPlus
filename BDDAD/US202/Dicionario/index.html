@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables US202</title>
+</head>
+<body>
+
+
+<header>
+    <div class="nav01">
+        <div class="name">Base de Dados</div>
+    </div>
+
+    <div class="nav02">
+        <div class="text01">US202 INFO</div>
+
+        <ul class="ul01">
+            <li><a href="#">Tabelas</a></li>
+            <li><a href="Conceptual/conceptual.html">Conceptual</a></li>
+            <li><a href="Lógico/logico.html">Lógico</a></li>
+            <li><a href="Físico/fisico.html">Físico</a></li>
+        </ul>
+
+
+    </div>
+</header>
+
+
+
+<main>
+
+
+
+    <!-- Write your comments here -->
+
+    </br>
+    </br>
+
+    <h1>Porquê o Modo Relacional?</h1>
+    <p>
+        De forma a facilitar a gestão de dados relacionados com a gestão de uma exploração agrícola. <br>
+        A gestão de uma exploração agrícola é feita através de uma base de dados que contém informação sobre os clientes, os seus incidentes e as suas encomendas, sobre os setores, as suas culturas e toda a informação relevante relacionada com estes.
+    </p>
+    <p>
+        Para isto necessitamos de uma base de dados que nos permita gerir esta informação de forma eficiente e nos permita relacionar os dados de forma a garantir a sua persistência, a sua integridade e a sua confidencialidade,
+        assegurando que o padrão ACID é cumprido.
+        É também importante que seja possível a todo o momento a realização de transações independentes umas das outras, garantido que a informação destas já realizadas não é perdida.
+    </p>
+    <p>
+        Posto isto, optamos pelo modelo relacional, visto que este nos permite asssegurar tudo acima referido, sendo uma execelente ferramenta quando se trata de gerir informação relacionada. <br>
+        Embora existissem outras opções, dado que o tipo de dados que pretendemos gerir é relacionado, ou seja, contém várias relações entre si, este modelo foi o mais indicado.
+    </p>
+
+    <h4>Vantanges do Modo Relacional</h4>
+    <ul>
+        <li>Tecnologia madura e com bom suporte documental</li>
+        <li>A cargo de empresas bem estabelecidas no mercado</li>
+        <li>Standards SQL estão bem definidos e aceites globalmente</li>
+        <li>Todos os SGBDR garatem transações ACID (Atomicidade, Cosistência, Isolamento, Durabilidade)</li>
+    </ul>
+
+    </br>
+    </br>
+
+    <h1>Tabelas</h1>
+
+    </br>
+
+
+    <!-- Gestor Agrícola -->
+    <h3 style="font-family:Montserrat">Gestor Agrícola</h3>
+    <table id="GestorAgricola" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id do Gestor Agrícola</td>
+            <td>idGestorAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de um Gestor Agrícola</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+    <br/>
+
+
+
+    <!-- Exploração Agrícola -->
+    <h3 style="font-family:Montserrat">Exploração Agrícola</h3>
+    <table id="ExploracaoAgricola" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id da Exploração Agrícola</td>
+            <td>idGestorAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de uma Exploração Agrícola</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+        <tr>
+            <td>Id do Gestor Agrícola</td>
+            <td>idExploracaoAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de um Gestor Agrícola</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+    <br/>
+
+
+
+    <!-- Cliente -->
+    <h3 style="font-family:Montserrat">Cliente</h3>
+    <table id="Cliente" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Código Interno</td>
+            <td>codigoInterno</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de um Cliente</td>
+            <td>Automaticamente gerado e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>email</td>
+            <td class="green">VARCHAR(50)</td>
+            <td>Email de um cliente</td>
+            <td>Têm de conter o caracter '@'</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+        <tr>
+            <td>Tipo de cliente</td>
+            <td>tipo</td>
+            <td class="green">CHAR(1)</td>
+            <td>Pode ser Particular ou Empresa</td>
+            <td>Apenas pode conter 'P' ou 'E'</td>
+            <td>Domínio</td>
+        </tr>
+        <tr>
+            <td>Plafond do cliente</td>
+            <td>plafond</td>
+            <td class="green">NUMBER(8, 2)</td>
+            <td>Representa o crédito de um cliente</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Nivel de um cliente</td>
+            <td>nivelNegocio</td>
+            <td class="green">CHAR(1)</td>
+            <td>Relação entre incidentes e total de vendas</td>
+            <td>Apenas pode conter 'A', 'B' ou 'C')</td>
+            <td>Domínio</td>
+        </tr>
+        <tr>
+            <td>Nome de um cliente</td>
+            <td>nome</td>
+            <td class="green">VARCHAR(50)</td>
+            <td>Nome do cliente</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>Nif de um cliente</td>
+            <td>nif</td>
+            <td class="green">NUMBER(9)</td>
+            <td>NIF do cliente</td>
+            <td>Tem de conter 9 números</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+
+        <tr>
+            <td>ID do hub</td>
+            <td>idHub</td>
+            <td class="green">VARCHAR(5)</td>
+            <td>Id do Hub por defeito do cliente</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    <br/>
+
+
+    <!-- Cliente - Exploração Agrícola -->
+    <h3 style="font-family:Montserrat">Cliente - Exploração Agrícola</h3>
+    <table id="ClienteEploracaoAgricola" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id da Exploração Agrícola</td>
+            <td>idExploracaoAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de uma Exploração Agrícola</td>
+            <td>Foreign Key e Primary Key</td>
+            <td>Chave e Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Código de um cliente</td>
+            <td>codigoInternoCliente</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de um Cliente</td>
+            <td>Foreign Key e Primary Key</td>
+            <td>Chave e Integridade Referencial</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+    <br/>
+
+
+    <!-- Código Postal -->
+    <h3 style="font-family:Montserrat">Código Postal</h3>
+    <table id="CodigoPostal" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Código Postal</td>
+            <td>codigoPostal</td>
+            <td class="green">CHAR(8)</td>
+            <td>Código Postal de uma morada</td>
+            <td>Tem o seguinte formato: '____-___' e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Localidade</td>
+            <td>localidade</td>
+            <td class="green">VARCHAR(100)</td>
+            <td>Localidade correspondente ao código postal</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    <br/>
+
+
+    <!-- Morada -->
+    <h3 style="font-family:Montserrat">Morada</h3>
+    <table id="Morada" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Código Postal</td>
+            <td>codigoPostal</td>
+            <td class="green">CHAR(8)</td>
+            <td>Código Postal de um cliente</td>
+            <td>Tem o seguinte formato: '____-___', Primary e Foreign Key</td>
+            <td>Integridade Referencial</td>
+
+        </tr>
+
+        <tr>
+            <td>Número da Porta</td>
+            <td>numeroPorta</td>
+            <td class="green">INTEGER</td>
+            <td>Número da porta da Morada</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Codigo de um cliente</td>
+            <td>codigoInternoCliente</td>
+            <td class="green">INTEGER</td>
+            <td>Código que identifica um cliente</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Tipo de Morada</td>
+            <td>tipoMorada</td>
+            <td class="green">CHAR(1)</td>
+            <td>Tipo de morada (Entrega ou Correspondência)</td>
+            <td>Apenas pode conter 'C' ou 'E'</td>
+            <td>Domínio</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Encomenda -->
+    <h3 style="font-family:Montserrat">Encomenda</h3>
+    <table id="Encomenda" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Número de uma Encomenda</td>
+            <td>numeroEncomenda</td>
+            <td class="green">INTEGER</td>
+            <td>Número que identifica uma Encomenda</td>
+            <td>Automaticamente gerado e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Código de um cliente</td>
+            <td>codigoInternoCliente</td>
+            <td class="green">INTEGER</td>
+            <td>Código que identifica um cliente</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Código Postal</td>
+            <td>codigoPostalMorada</td>
+            <td class="green">CHAR(8)</td>
+            <td>Código Postal de um cliente</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Número da Porta</td>
+            <td>numeroPortaMorada</td>
+            <td class="green">INTEGER</td>
+            <td>Número da porta da Morada</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Data da Encomenda</td>
+            <td>dataEncomenda</td>
+            <td class="green">DATE</td>
+            <td>Data de quando a encomenda foi feita</td>
+            <td>Valor por Defeito - Data do registo</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>Estado da Encomenda</td>
+            <td>estado</td>
+            <td class="green">CHAR(1)</td>
+            <td>Pode ser Registada, Encomendada ou Paga</td>
+            <td>Apenas pode conter 'R', 'E', 'P'</td>
+            <td>Domínio</td>
+        </tr>
+
+        <tr>
+            <td>Data de Entrega</td>
+            <td>dataEntrega</td>
+            <td class="green">DATE</td>
+            <td>Data de quando a encomenda foi entregue</td>
+            <td>Tem de ser superior ou igual à data da Encomenda</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+
+        <tr>
+            <td>Data de Pagamento</td>
+            <td>dataPagamento</td>
+            <td class="green">DATE</td>
+            <td>Data de quando a encomenda foi paga</td>
+            <td>Tem de ser superior ou igual à data da Encomenda</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+
+        <tr>
+            <td>Valor pago</td>
+            <td>valorTotal</td>
+            <td class="green">NUMBER(8, 2)</td>
+            <td>Valor total pago pela Encomenda</td>
+            <td>Não pode ser negativo</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+
+        <tr>
+            <td>ID do hub</td>
+            <td>idHub</td>
+            <td class="green">VARCHAR(5)</td>
+            <td>Identificador de um Hub</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Incidente -->
+    <h3 style="font-family:Montserrat">Incidente</h3>
+    <table id="Incidente" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id de um Incidente</td>
+            <td>idIncidente</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de um Incidente</td>
+            <td>Automaticamente gerado e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Código de um cliente</td>
+            <td>codigoInternoCliente</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de um Cliente</td>
+            <td>Foreign Key e Primary Key</td>
+            <td>Chave e Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Numero da encomenda</td>
+            <td>numeroEncomenda</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de uma Encomenda</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Valor Dívida</td>
+            <td>valorDivida</td>
+            <td class="green">NUMBER(8, 2)</td>
+            <td>Valor que um cliente deve</td>
+            <td>Não pode ser negativo</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+
+        <tr>
+            <td>Data de uma Sanação</td>
+            <td>dataSanado</td>
+            <td class="green">DATE</td>
+            <td>Data da sanação da dívida</td>
+            <td>Tem de ser superior à data de Sanação</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+
+        <tr>
+            <td>Data de Ocorrência</td>
+            <td>dataOcorrencia</td>
+            <td class="green">DATE</td>
+            <td>Date de ocorrência da dívida</td>
+            <td>Não pode ser null</td>
+            <td>-</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    <br/>
+
+
+    <!-- Estação Meteorológica -->
+    <h3 style="font-family:Montserrat">Estação Meteorológica</h3>
+    <table id="Estação Meteorológica" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Identificador da Estação</td>
+            <td>idEstacaoMeteorologica</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador de uma Estação Meteroloógica</td>
+            <td>Automaticamente gerado e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Id da Exploração Agrícola</td>
+            <td>idExploracaoAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de uma Exploração Agrícola</td>
+            <td>Foreign Key e Primary Key</td>
+            <td>Chave e Integridade Referencial</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Tipo Sensor -->
+    <h3 style="font-family:Montserrat">Tipo Sensor</h3>
+    <table id="TipoSensor" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Tipo do Sensor</td>
+            <td>tipo</td>
+            <td class="green">CHAR(2)</td>
+            <td>Humidade Solo, Pluviosidade, Temperatura Solo, Velocidade Vento, Temperatura Atmosférica, Humidade Ar, Pressão Atmosférica</td>
+            <td>Apenas pode conter 'HS', 'Pl', 'VV', 'TA', 'HA', 'PA' e Primary Key</td>
+            <td>Chave e Domínio</td>
+        </tr>
+
+        <tr>
+            <td>Unidade do Sensor</td>
+            <td>unidade</td>
+            <td class="green">VARCHAR(5)</td>
+            <td>Unidade utilizada pelo sensor</td>
+            <td>Tamanho para 5, suposto escrever, p.e.: 'km/h'</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Sensor -->
+    <h3 style="font-family:Montserrat">Sensor</h3>
+    <table id="Sensor" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id do Sensor</td>
+            <td>identificador</td>
+            <td class="green">INTEGER</td>
+            <td>Identifica um Sensor</td>
+            <td>Automaticamente gerado e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Identificador da Estação</td>
+            <td>idEstacaoMeteorologica</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador de uma Estação Meteroloógica</td>
+            <td>Foreign key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Tipo de Sensor</td>
+            <td>tipoTipoSensor</td>
+            <td class="green">CHAR(2)</td>
+            <td>Tipo do Sensor</td>
+            <td>Foreign key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Sensor Leituras -->
+    <h3 style="font-family:Montserrat">Sensor Leituras</h3>
+    <table id="SensorLeituras" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id do Sensor</td>
+            <td>identificadorSensor</td>
+            <td class="green">INTEGER</td>
+            <td>Identifica um Sensor</td>
+            <td>Foregin  Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Tipo de Sensor</td>
+            <td>tipoTipoSensor</td>
+            <td class="green">CHAR(2)</td>
+            <td>Tipo do Sensor</td>
+            <td>Foreign key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Valor lido</td>
+            <td>valorLido</td>
+            <td class="green">INTEGER</td>
+            <td>Valor lido pelo sensor</td>
+            <td>Não pode ser negativo, máximo valor 100</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+
+        <tr>
+            <td>Referência</td>
+            <td>referencia</td>
+            <td class="green">INTEGER</td>
+            <td>Valor de referência para a leitura</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Momento de leitura</td>
+            <td>instanteLeitura</td>
+            <td class="green">DATE</td>
+            <td>Data e hora do momento de leitura do Sensor</td>
+            <td>Não pode ser null</td>
+            <td>-</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Setor -->
+    <h3 style="font-family:Montserrat">Setor</h3>
+    <table id="Setor" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Designacao do setor</td>
+            <td>designacao</td>
+            <td class="green">VARCHAR(10)</td>
+            <td>Nome de um setor</td>
+            <td>Tamanho máximo: 10 e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Id da Exploração Agrícola</td>
+            <td>idExploracaoAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de uma Exploração Agrícola</td>
+            <td>Foreign Key e Primary Key</td>
+            <td>Chave e Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Area total</td>
+            <td>areaTotal</td>
+            <td class="green">NUMBER(8, 2)</td>
+            <td>Area total ocupada por um Setor</td>
+            <td>Não pode ser negativo, máximo valor: 99999999</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Auditoria -->
+    <h3 style="font-family:Montserrat">Auditoria</h3>
+    <table id="Auditoria" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id da Auditoria</td>
+            <td>idAuditoria</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador de uma Auditoria</td>
+            <td>Automaticamente gerado e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Id do Gestor Agrícola</td>
+            <td>idGestorAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de um Gestor Agrícola</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Designacao do setor</td>
+            <td>designacaoSetor</td>
+            <td class="green">VARCHAR(10)</td>
+            <td>Nome de um setor</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Id da Exploração Agrícola</td>
+            <td>idExploracaoAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de uma Exploração Agrícola</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Momento do Registo</td>
+            <td>dataHora</td>
+            <td class="green">DATE</td>
+            <td>Data e hora do momento do Registo</td>
+            <td>Não pode ser null</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>Nome do utilizador</td>
+            <td>username</td>
+            <td class="green">VARCHAR(20)</td>
+            <td>Nome do utilizador que realizou a auditoria</td>
+            <td>Não pode ser null</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>Operação de Escrita</td>
+            <td>operacaoEscrita</td>
+            <td class="green">CHAR(1)</td>
+            <td>Operação de escrita executa, INSERT, UPDATE, DELETE</td>
+            <td>Apenas pode conter 'I', 'U', 'D'</td>
+            <td>Domínio</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Operação Agrícola -->
+    <h3 style="font-family:Montserrat">Operação Agrícola</h3>
+    <table id="OperacaoAgricola" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id da Operação Agrícola</td>
+            <td>idOperacaoAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador de uma Operação Agrícola</td>
+            <td>Automaticamente gerado e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Designacao do setor</td>
+            <td>designacaoSetor</td>
+            <td class="green">VARCHAR(10)</td>
+            <td>Nome de um setor</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Id da Exploração Agrícola</td>
+            <td>idExploracaoAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de uma Exploração Agrícola</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Data Agendada</td>
+            <td>dataAgendada</td>
+            <td class="green">DATE</td>
+            <td>Data agendada para realizar a Operação Agrícola</td>
+            <td>Não pode ser null</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>Data de Realização</td>
+            <td>dataRealizacao</td>
+            <td class="green">DATE</td>
+            <td>Data de realização da Operação Agrícola</td>
+            <td>Tem de ser superior ou igual à data agendada</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+
+        <tr>
+            <td>Tipo de Operação Agrícola</td>
+            <td>tipo</td>
+            <td class="green">VARCHAR(40)</td>
+            <td>Pode ser Irrigação e adubação, Aplicação de um Fator de Produção, etc</td>
+            <td>Não pode ser null</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>Estado da Operação</td>
+            <td>estadoOperacao</td>
+            <td class="green">CHAR(1)</td>
+            <td>Pode ser 'Atualizada', 'Cancelada' ou 'Realizada'</td>
+            <td>Apenas pode conter 'A', 'C', ou 'R'</td>
+            <td>Domínio</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Fator Produção -->
+    <h3 style="font-family:Montserrat">Fator Produção</h3>
+    <table id="FatorProducao" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Nome Comercial</td>
+            <td>nomeComercial</td>
+            <td class="green">VARCHAR(30)</td>
+            <td>Nome comercial do Produto</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Tipo de Fator de Produção</td>
+            <td>tipo</td>
+            <td class="green">CHAR(2)</td>
+            <td>Pode ser 'Corretivo Mineral', 'Fertilizante', 'Produto Fitofármaco'</td>
+            <td>Apenas pode conter 'CM', 'FE' ou 'PF'</td>
+            <td>Domínio</td>
+        </tr>
+
+        <tr>
+            <td>Fornecedor</td>
+            <td>fornecedor</td>
+            <td class="green">VARCHAR(30)</td>
+            <td>Fornecedor do Fator de Produção</td>
+            <td>Não pode ser null</td>
+            <td>-</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Fatores Aplicados -->
+    <h3 style="font-family:Montserrat">Fatores Aplicados</h3>
+    <table id="FatoresAplicados" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td>Id da Operação Agrícola</td>
+            <td>idOperacaoAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador de uma Operação Agrícola</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Nome Comercial</td>
+            <td>nomeComercialFatorProducao</td>
+            <td class="green">VARCHAR(30)</td>
+            <td>Nome comercial do Produto</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Quantidade Aplicada</td>
+            <td>quantidadeAplicada</td>
+            <td class="green">NUMBER(5, 2)</td>
+            <td>Quantidade do produto que foi aplicada</td>
+            <td>Não pode ser negativa</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+
+        <tr>
+            <td>Forma de Aplicação</td>
+            <td>formaAplicacao</td>
+            <td class="green">VARCHAR(10)</td>
+            <td>Pode ser 'Foliar', 'Fertirrega' ou 'Solo'</td>
+            <td>Apenas pode conter 'Foliar', 'Fertirrega' ou 'Solo''</td>
+            <td>Domínio</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Restrição -->
+    <h3 style="font-family:Montserrat">Restrição</h3>
+    <table id="Restricao" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id da Restrição</td>
+            <td>idRestricao</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador de uma Restrição</td>
+            <td>Automaticamente gerado e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Nome Comercial</td>
+            <td>nomeComercialFatorProducao</td>
+            <td class="green">VARCHAR(30)</td>
+            <td>Nome comercial do Produto</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Data Inicial</td>
+            <td>dataInicial</td>
+            <td class="green">DATE</td>
+            <td>Data de início da Restrição</td>
+            <td>Não pode ser null</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>Data Final</td>
+            <td>dataFinal</td>
+            <td class="green">DATE</td>
+            <td>Data de fim da Restrição</td>
+            <td>Tem de ser superior à data inicial</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+    <!-- Restrição Setor -->
+    <h3 style="font-family:Montserrat">Restrição Setor</h3>
+    <table id="RestricaoSetor" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id da Restrição</td>
+            <td>idRestricao</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de uma Restrição</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Designacao do setor</td>
+            <td>designacaoSetor</td>
+            <td class="green">VARCHAR(10)</td>
+            <td>Nome de um setor</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Id da Exploração Agrícola</td>
+            <td>idExploracaoAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de uma Exploração Agrícola</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Constituinte -->
+    <h3 style="font-family:Montserrat">Constituinte</h3>
+    <table id="Constituinte" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Nome</td>
+            <td>nome</td>
+            <td class="green">VARCHAR(30)</td>
+            <td>Nome do constituinte</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Quantidade</td>
+            <td>quantidade</td>
+            <td class="green">NUMBER(5, 2)</td>
+            <td>Quantidade de Constituinte Aplicada</td>
+            <td>Não pode ser negativa</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+
+        <tr>
+            <td>Unidade</td>
+            <td>unidade</td>
+            <td class="green">CHAR(5)</td>
+            <td>Unidade do Constituinte</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>Categoria</td>
+            <td>categoria</td>
+            <td class="green">CHAR(1)</td>
+            <td>Pode ser 'Elemento' ou 'Substância'</td>
+            <td>Apenas pode conter 'E' ou 'S'</td>
+            <td>Domínio</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Fator Producao Constituinte -->
+    <h3 style="font-family:Montserrat">Fator Producao Constituinte</h3>
+    <table id="FatorProducaoConstituinte" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Nome comercial</td>
+            <td>nomeComercialFatorProducao</td>
+            <td class="green">VARCHAR(30)</td>
+            <td>Nome comercial de um Fator de Produção</td>
+            <td>Primary and Foreign Key</td>
+            <td>Chave e Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Nome do Constituinte</td>
+            <td>nomeConstituinte</td>
+            <td class="green">VARCHAR(30)</td>
+            <td>Nome de um constituinte</td>
+            <td>Primary and Foreign Key</td>
+            <td>Chave e Integridade Referencial</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Cultura -->
+    <h3 style="font-family:Montserrat">Cultura</h3>
+    <table id="Cultura" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id da Cultura</td>
+            <td>idCultura</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador da Cultura</td>
+            <td>Automaticamente gerado e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Designacao do setor</td>
+            <td>designacaoSetor</td>
+            <td class="green">VARCHAR(30)</td>
+            <td>Nome de um setor</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Id da Exploração Agrícola</td>
+            <td>idExploracaoAgricola</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de uma Exploração Agrícola</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Area da Cultura</td>
+            <td>areaCultura</td>
+            <td class="green">NUMBER(8, 2)</td>
+            <td>Area total de uma cultura</td>
+            <td>Não pode ser negativa</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+
+        <tr>
+            <td>Tipo de Cultura</td>
+            <td>tipo</td>
+            <td class="green">CHAR(1)</td>
+            <td>Pode ser 'Permanente' ou 'Temporário'</td>
+            <td>Apenas pode conter 'P' ou 'T'</td>
+            <td>Domínio</td>
+
+        <tr>
+            <td>Cultivo da Cultura</td>
+            <td>cultivo</td>
+            <td class="green">VARCHAR(40)</td>
+            <td>Cultivo que está a ser plantado na cultura</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+    <!-- Produto -->
+    <h3 style="font-family:Montserrat">Produto</h3>
+    <table id="Produto" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id do Produto</td>
+            <td>idProduto</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de um Produto</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Nome do Produto</td>
+            <td>nome</td>
+            <td class="green">VARCHAR(40)</td>
+            <td>Nome de um Produto</td>
+            <td>Nennuma</td>
+            <td>-</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+    </br>
+
+
+    <!-- Cultura Produto -->
+    <h3 style="font-family:Montserrat">Cultura Produto</h3>
+    <table id="CulturaProduto" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id da Cultura</td>
+            <td>idCultura</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de uma Cultura</td>
+            <td>Primary e Foreing Key</td>
+            <td>Chave e Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Id do Produto</td>
+            <td>idProduto</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de um Produto</td>
+            <td>Primary e Foreing Key</td>
+            <td>Chave e Integridade Referencial</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+    </br>
+
+    <!-- Safra -->
+    <h3 style="font-family:Montserrat">Safra</h3>
+    <table id="Safra" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id da Safra</td>
+            <td>idSafra</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador de uma Safra</td>
+            <td>Automaticamente gerado e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Id da Cultura</td>
+            <td>idCultura</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador da Cultura</td>
+            <td>Foreign Key</td>
+            <td>Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Quantidade de Produção</td>
+            <td>quantidadeProducao</td>
+            <td class="green">INTEGER</td>
+            <td>Quantidade de produção de um cultivo</td>
+            <td>Não pode ser negativa</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+
+        <tr>
+            <td>Lucro</td>
+            <td>lucro</td>
+            <td class="green">NUMBER(8, 2)</td>
+            <td>Lucro que a produção do cultivo trouxe</td>
+            <td>Não pode ser superior a 99999999</td>
+            <td>Integridade de Coluna</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Característica -->
+    <h3 style="font-family:Montserrat">Característica</h3>
+    <table id="Caracteristica" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id da Característica</td>
+            <td>idCaracteristica</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador de uma Característica</td>
+            <td>Automaticamente gerado e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Id da Cultura</td>
+            <td>idCultura</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador da Cultura</td>
+            <td>Foreign Key e Primary Key</td>
+            <td>Chave e Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Nome</td>
+            <td>nome</td>
+            <td class="green">VARCHAR(20)</td>
+            <td>Nome da Característica</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+        </tr>
+
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Parâmetro -->
+    <h3 style="font-family:Montserrat">Parâmetro</h3>
+    <table id="Parametro" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Id do Parâmetro</td>
+            <td>idParametro</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador de uma Parâmetro</td>
+            <td>Automaticamente gerado e Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Id da Característica</td>
+            <td>idCaracteristica</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador de uma Característica</td>
+            <td>Foreign Key e Primary Key</td>
+            <td>Chave e Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Id da Cultura</td>
+            <td>idCultura</td>
+            <td class="green">INTEGER</td>
+            <td>Identificador da Cultura</td>
+            <td>Foreign Key e Primary Key</td>
+            <td>Chave e Integridade Referencial</td>
+        </tr>
+
+        <tr>
+            <td>Nome</td>
+            <td>nome</td>
+            <td class="green">VARCHAR(20)</td>
+            <td>Nome da Característica</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+        </tr>
+
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+    </br>
+
+
+    <!-- Input_Sensor -->
+    <h3 style="font-family:Montserrat">Input_Sensor</h3>
+    <table id="Input_Sensor" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Dados</td>
+            <td>input_string</td>
+            <td class="green">VARCHAR(25)</td>
+            <td>Input do valor lido num sensor</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- Input Hub -->
+    <h3 style="font-family:Montserrat">Input_Hub</h3>
+    <table id="inputHub" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Dados</td>
+            <td>intput_string</td>
+            <td class="green">VARCHAR(25)</td>
+            <td>Conteudo dos dados de hub</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    <!-- Hub -->
+    <h3 style="font-family:Montserrat">Hub</h3>
+    <table id="Hub" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>ID do hub</td>
+            <td>idHub</td>
+            <td class="green">VARCHAR(5)</td>
+            <td>Identificador de um Hub</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Latitude</td>
+            <td>latitude</td>
+            <td class="green">NUMBER(6, 4)</td>
+            <td>Coordenada geográfica do hub</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>Longitude</td>
+            <td>longitude</td>
+            <td class="green">NUMBER(6, 4)</td>
+            <td>Coordenada geográfica do hub</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>Id do participante</td>
+            <td>idParticipante</td>
+            <td class="green">VARCHAR(5)</td>
+            <td>Identificador de um um Participante</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+
+    <!-- LogLeiturasInput -->
+    <h3 style="font-family:Montserrat">LogLeiturasInput</h3>
+    <table id="LogLeiturasInput" class="styled-table">
+        <thead>
+        <tr>
+            <th>Variável</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Restrição</th>
+            <th>Tipo de Restrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>idLog</td>
+            <td>idLog</td>
+            <td class="green">INTEGER</td>
+            <td>Número de identificação de um Produto</td>
+            <td>Primary Key</td>
+            <td>Chave</td>
+        </tr>
+
+        <tr>
+            <td>Data Leitura</td>
+            <td>dataLeitura</td>
+            <td class="green">TIMESTAMP</td>
+            <td>Data da leitura</td>
+            <td>Nennuma</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>Registos Lidos</td>
+            <td>registosLidos</td>
+            <td class="green">NUMBER</td>
+            <td>Registos lidos</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Registos Inseridos</td>
+            <td>registosInseridos</td>
+            <td class="green">NUMBER</td>
+            <td>Registos Inseridos</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Registos com Erro</td>
+            <td>registosComErro</td>
+            <td class="green">NUMBER</td>
+            <td>Registos com Erro</td>
+            <td>Nenhuma</td>
+            <td>-</td>
+
+        </tr>
+        <!-- and so on... -->
+        </tbody>
+    </table>
+
+
+    </br>
+
+</main>
+</body>
+</html>

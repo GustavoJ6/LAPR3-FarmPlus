@@ -1,0 +1,1 @@
+Sensor * allocate_memory_sensors(int size);

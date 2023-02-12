@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1300.0" styleClass="body_background" stylesheets="@../../SyteSheet/stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Screens.ProfileGUI">
+   <top>
+      <VBox prefHeight="76.0" prefWidth="329.0" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="103.0" prefWidth="329.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="4.0" prefWidth="329.0">
+               <children>
+                  <HBox fx:id="hBoxBar" maxHeight="10.0" maxWidth="1920.0" minHeight="4.0" minWidth="300.0" styleClass="separator_color" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="68.0" prefWidth="329.0">
+               <children>
+                  <HBox fx:id="hBoxLeft" prefHeight="68.0" prefWidth="24.0" />
+                  <Button fx:id="btProfile" mnemonicParsing="false" styleClass="transparent_button">
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/ProfileIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <HBox fx:id="hBoxVert1" alignment="CENTER" prefHeight="100.0" prefWidth="40.0">
+                     <children>
+                        <HBox prefHeight="77.0" prefWidth="3.0" styleClass="separator_color">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+                  <Button fx:id="btHome" mnemonicParsing="false" styleClass="transparent_button">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/HomeIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <HBox fx:id="hBoxVert2" alignment="CENTER" prefHeight="100.0" prefWidth="40.0">
+                     <children>
+                        <HBox prefHeight="72.0" prefWidth="4.0" styleClass="separator_color">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+                  <Button fx:id="btSettings" mnemonicParsing="false" styleClass="transparent_button">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/SettingsIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <HBox fx:id="hBoxRight" prefHeight="68.0" prefWidth="24.0" />
+               </children>
+            </HBox>
+            <HBox fx:id="hBoxBar1" prefHeight="0.0" prefWidth="329.0" />
+         </children>
+      </VBox>
+   </bottom>
+   <right>
+      <VBox alignment="TOP_CENTER" prefHeight="591.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="192.0" prefWidth="622.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="329.0">
+               <children>
+                  <Label text="Name" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="545.0">
+                     <children>
+                        <Label fx:id="txtUserName" text="Label" textFill="#b9b7b7">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="2.0" prefWidth="329.0" />
+            <HBox alignment="CENTER" prefHeight="2.0" prefWidth="329.0">
+               <children>
+                  <HBox fx:id="hBoxBar2" maxHeight="10.0" maxWidth="1920.0" minHeight="2.0" minWidth="300.0" prefWidth="570.0" styleClass="separator_color" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="329.0">
+               <children>
+                  <Label text="Password" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="519.0">
+                     <children>
+                        <Label fx:id="txtPassword" text="Irrelevante" textFill="#b9b7b7">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Button fx:id="btReveal" mnemonicParsing="false" styleClass="transparent_button">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/show.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="2.0" prefWidth="329.0">
+               <children>
+                  <HBox fx:id="hBoxBar3" maxHeight="17.0" maxWidth="1920.0" minHeight="2.0" minWidth="300.0" prefHeight="12.0" prefWidth="570.0" styleClass="separator_color" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="131.0" prefWidth="622.0">
+               <children>
+                  <Button fx:id="btLogout" mnemonicParsing="false" prefHeight="50.0" prefWidth="233.0" styleClass="logout_button" text="Logout">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin></HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="591.0" prefWidth="933.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="230.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../../Images/MonsterProfilePicture.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="157.0" prefWidth="678.0">
+               <children>
+                  <Label fx:id="lbGreet" text="Hello, " textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

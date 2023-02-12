@@ -1,0 +1,2 @@
+#include "sensor.h"
+void remove_sensor(int * sensor_amounts, Sensor **temperature_sensors, Sensor **atmospheric_humidity_sensors, Sensor **soil_humidity_sensors, Sensor **pluviosity_sensors, Sensor **wind_speed_sensors, Sensor **wind_direction_sensors);

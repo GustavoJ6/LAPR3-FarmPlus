@@ -1,0 +1,1 @@
+void exportDailyMatrix(int matrix[6][3]);

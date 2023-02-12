@@ -1,0 +1,664 @@
+/* Setor */
+INSERT INTO Setor VALUES ('A', 100);
+INSERT INTO Setor VALUES ('B', 100);
+INSERT INTO Setor VALUES ('C', 200);
+INSERT INTO Setor VALUES ('D', 200);
+INSERT INTO Setor VALUES ('E', 300);
+
+/* Alternative */
+/*
+INSERT INTO Setor(designacao, idExploracaoAgricola)
+SELECT designacao, idExploracaoAgricola
+FROM User1.Setor;
+ */
+
+/* Cultura */
+INSERT INTO Cultura VALUES(10, 'A', 100, 'T', 'Morango');
+INSERT INTO Cultura VALUES(11, 'A', 100, 'T', 'Mirtilo');
+INSERT INTO Cultura VALUES(12, 'B', 100, 'P', 'Banana');
+INSERT INTO Cultura VALUES(13, 'B', 100, 'T', 'Kiwi');
+
+INSERT INTO Cultura VALUES(14, 'C', 200, 'P', 'Pera');
+INSERT INTO Cultura VALUES(15, 'C', 200, 'P', 'Maça');
+INSERT INTO Cultura VALUES(16, 'D', 200, 'P', 'Laranja');
+
+INSERT INTO Cultura VALUES(17, 'E', 300, 'T', 'Maracuja');
+
+/* Alternative */
+/*
+INSERT INTO Cultura(idCultura, designacaoSetor, idExploracaoAgricola, tipoCultura, cultivo)
+SELECT idCultura, designacaoSetor, idExploracaoAgricola, tipo, cultivo
+FROM User1.Cultura;
+
+ */
+
+/* Cliente */
+INSERT INTO Cliente VALUES (1);
+INSERT INTO Cliente VALUES (2);
+INSERT INTO Cliente VALUES (3);
+INSERT INTO Cliente VALUES (4);
+INSERT INTO Cliente VALUES (5);
+INSERT INTO Cliente VALUES (6);
+INSERT INTO Cliente VALUES (7);
+INSERT INTO Cliente VALUES (8);
+INSERT INTO Cliente VALUES (9);
+INSERT INTO Cliente VALUES (10);
+
+/* Alternative */
+/*
+INSERT INTO Cliente(codigoInterno)
+SELECT codigoInterno
+FROM User1.Cliente;
+ */
+
+/* Tempo */
+INSERT INTO Tempo VALUES (TO_DATE('2018', 'YYYY'), TO_DATE('01', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2018', 'YYYY'), TO_DATE('02', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2018', 'YYYY'), TO_DATE('03', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2018', 'YYYY'), TO_DATE('04', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2018', 'YYYY'), TO_DATE('05', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2018', 'YYYY'), TO_DATE('06', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2018', 'YYYY'), TO_DATE('07', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2018', 'YYYY'), TO_DATE('08', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2018', 'YYYY'), TO_DATE('09', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2018', 'YYYY'), TO_DATE('10', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2018', 'YYYY'), TO_DATE('11', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2018', 'YYYY'), TO_DATE('12', 'MM'));
+
+INSERT INTO Tempo VALUES (TO_DATE('2019', 'YYYY'), TO_DATE('01', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2019', 'YYYY'), TO_DATE('02', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2019', 'YYYY'), TO_DATE('03', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2019', 'YYYY'), TO_DATE('04', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2019', 'YYYY'), TO_DATE('05', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2019', 'YYYY'), TO_DATE('06', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2019', 'YYYY'), TO_DATE('07', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2019', 'YYYY'), TO_DATE('08', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2019', 'YYYY'), TO_DATE('09', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2019', 'YYYY'), TO_DATE('10', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2019', 'YYYY'), TO_DATE('11', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2019', 'YYYY'), TO_DATE('12', 'MM'));
+
+INSERT INTO Tempo VALUES (TO_DATE('2020', 'YYYY'), TO_DATE('01', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2020', 'YYYY'), TO_DATE('02', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2020', 'YYYY'), TO_DATE('03', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2020', 'YYYY'), TO_DATE('04', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2020', 'YYYY'), TO_DATE('05', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2020', 'YYYY'), TO_DATE('06', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2020', 'YYYY'), TO_DATE('07', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2020', 'YYYY'), TO_DATE('08', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2020', 'YYYY'), TO_DATE('09', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2020', 'YYYY'), TO_DATE('10', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2020', 'YYYY'), TO_DATE('11', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2020', 'YYYY'), TO_DATE('12', 'MM'));
+
+INSERT INTO Tempo VALUES (TO_DATE('2021', 'YYYY'), TO_DATE('01', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2021', 'YYYY'), TO_DATE('02', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2021', 'YYYY'), TO_DATE('03', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2021', 'YYYY'), TO_DATE('04', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2021', 'YYYY'), TO_DATE('05', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2021', 'YYYY'), TO_DATE('06', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2021', 'YYYY'), TO_DATE('07', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2021', 'YYYY'), TO_DATE('08', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2021', 'YYYY'), TO_DATE('09', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2021', 'YYYY'), TO_DATE('10', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2021', 'YYYY'), TO_DATE('11', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2021', 'YYYY'), TO_DATE('12', 'MM'));
+
+INSERT INTO Tempo VALUES (TO_DATE('2022', 'YYYY'), TO_DATE('01', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2022', 'YYYY'), TO_DATE('02', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2022', 'YYYY'), TO_DATE('03', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2022', 'YYYY'), TO_DATE('04', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2022', 'YYYY'), TO_DATE('05', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2022', 'YYYY'), TO_DATE('06', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2022', 'YYYY'), TO_DATE('07', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2022', 'YYYY'), TO_DATE('08', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2022', 'YYYY'), TO_DATE('09', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2022', 'YYYY'), TO_DATE('10', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2022', 'YYYY'), TO_DATE('11', 'MM'));
+INSERT INTO Tempo VALUES (TO_DATE('2022', 'YYYY'), TO_DATE('12', 'MM'));
+
+/* Produto */
+INSERT INTO Produto VALUES (1,  'Sumo de Frutos Vermelhos');
+INSERT INTO Produto VALUES (2,  'Salada de Fruta');
+INSERT INTO Produto VALUES (3,  'Sumo de Laranja');
+INSERT INTO Produto VALUES (4,  'Maracuja');
+INSERT INTO Produto VALUES (5,  'Laranja');
+INSERT INTO Produto VALUES (6,  'Morango');
+INSERT INTO Produto VALUES (7,  'Bolo de Mirtilo');
+INSERT INTO Produto VALUES (8,  'Bolo de Laranja');
+INSERT INTO Produto VALUES (9,  'Pera');
+INSERT INTO Produto VALUES (10, 'Sumo Tutti Fruti');
+INSERT INTO Produto VALUES (11, 'Kiwi');
+INSERT INTO Produto VALUES (12, 'Bolo de Morango');
+
+/* Alternative */
+/*
+INSERT INTO Produto(idProduto, nome)
+SELECT idProduto, nome
+FROM User1.Produto;
+ */
+
+/* Cultura Produto */
+INSERT INTO CulturaProduto VALUES (10, 1);
+INSERT INTO CulturaProduto VALUES (11, 1);
+INSERT INTO CulturaProduto VALUES (10, 2);
+INSERT INTO CulturaProduto VALUES (12, 2);
+INSERT INTO CulturaProduto VALUES (13, 2);
+INSERT INTO CulturaProduto VALUES (14, 2);
+INSERT INTO CulturaProduto VALUES (16, 3);
+INSERT INTO CulturaProduto VALUES (10, 4);
+INSERT INTO CulturaProduto VALUES (16, 5);
+INSERT INTO CulturaProduto VALUES (10, 6);
+INSERT INTO CulturaProduto VALUES (11, 7);
+INSERT INTO CulturaProduto VALUES (16, 8);
+INSERT INTO CulturaProduto VALUES (14, 9);
+INSERT INTO CulturaProduto VALUES (10, 10);
+INSERT INTO CulturaProduto VALUES (11, 10);
+INSERT INTO CulturaProduto VALUES (12, 10);
+INSERT INTO CulturaProduto VALUES (14, 10);
+INSERT INTO CulturaProduto VALUES (15, 10);
+INSERT INTO CulturaProduto VALUES (17, 10);
+
+/* Alternative */
+/*
+INSERT INTO CulturaProduto(idCultura, idProduto)
+SELECT idCultura, idProduto
+FROM User1.CulturaProduto;
+ */
+
+
+/* Dados Negocio */
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2731.50, 4134.80, 10, TO_DATE('2018', 'YYYY'), TO_DATE('01', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3894.12, 8084.54, 10, TO_DATE('2018', 'YYYY'), TO_DATE('02', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3057.27, 6532.56, 10, TO_DATE('2018', 'YYYY'), TO_DATE('03', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6292.60, 9971.78, 10, TO_DATE('2018', 'YYYY'), TO_DATE('04', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6210.10, 7701.65, 10, TO_DATE('2018', 'YYYY'), TO_DATE('05', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8756.23, 2279.19, 10, TO_DATE('2018', 'YYYY'), TO_DATE('06', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3570.66, 6733.74, 10, TO_DATE('2018', 'YYYY'), TO_DATE('07', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4495.63, 2962.71, 10, TO_DATE('2018', 'YYYY'), TO_DATE('08', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8611.50, 1704.54, 10, TO_DATE('2018', 'YYYY'), TO_DATE('09', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5743.12, 1053.41, 10, TO_DATE('2018', 'YYYY'), TO_DATE('10', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7715.90, 3091.15, 10, TO_DATE('2018', 'YYYY'), TO_DATE('11', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1340.20, 4641.81, 10, TO_DATE('2018', 'YYYY'), TO_DATE('12', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3433.8, 5754.41, 10, TO_DATE('2019', 'YYYY'), TO_DATE('01', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3797.70, 2558.96, 10, TO_DATE('2019', 'YYYY'), TO_DATE('02', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7797.26, 9396.46, 10, TO_DATE('2019', 'YYYY'), TO_DATE('03', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7733.67, 6328.82, 10, TO_DATE('2019', 'YYYY'), TO_DATE('04', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1642.84, 8669.69, 10, TO_DATE('2019', 'YYYY'), TO_DATE('05', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5141.76, 3882.76, 10, TO_DATE('2019', 'YYYY'), TO_DATE('06', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2422.3, 1231.62, 10, TO_DATE('2019', 'YYYY'), TO_DATE('07', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7174.9, 2381.64, 10, TO_DATE('2019', 'YYYY'), TO_DATE('08', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7556.89, 3484.19, 10, TO_DATE('2019', 'YYYY'), TO_DATE('09', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1412.47, 7091.77, 10, TO_DATE('2019', 'YYYY'), TO_DATE('10', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6107.41, 8703.53, 10, TO_DATE('2019', 'YYYY'), TO_DATE('11', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4680.52, 8141.30, 10, TO_DATE('2019', 'YYYY'), TO_DATE('12', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1189.72, 2529.65, 10, TO_DATE('2020', 'YYYY'), TO_DATE('01', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6663.65, 8991.57, 10, TO_DATE('2020', 'YYYY'), TO_DATE('02', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7035.80, 9255.22, 10, TO_DATE('2020', 'YYYY'), TO_DATE('03', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2643.7, 2635.36, 10, TO_DATE('2020', 'YYYY'), TO_DATE('04', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2833.87, 3951.84, 10, TO_DATE('2020', 'YYYY'), TO_DATE('05', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3016.66, 2379.97, 10, TO_DATE('2020', 'YYYY'), TO_DATE('06', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5671.95, 4727.39, 10, TO_DATE('2020', 'YYYY'), TO_DATE('07', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1358.47, 2504.75, 10, TO_DATE('2020', 'YYYY'), TO_DATE('08', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4327.95, 3831.8, 10, TO_DATE('2020', 'YYYY'), TO_DATE('09', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7471.56, 5198.39, 10, TO_DATE('2020', 'YYYY'), TO_DATE('10', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2940.57, 5108.75, 10, TO_DATE('2020', 'YYYY'), TO_DATE('11', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2111.49, 5236.30, 10, TO_DATE('2020', 'YYYY'), TO_DATE('12', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9014.14, 9711.82, 10, TO_DATE('2021', 'YYYY'), TO_DATE('01', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2437.55, 2505.46, 10, TO_DATE('2021', 'YYYY'), TO_DATE('02', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4303.77, 8901.71, 10, TO_DATE('2021', 'YYYY'), TO_DATE('03', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7085.38, 4516.68, 10, TO_DATE('2021', 'YYYY'), TO_DATE('04', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8634.97, 1334.38, 10, TO_DATE('2021', 'YYYY'), TO_DATE('05', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7355.26, 1667.19, 10, TO_DATE('2021', 'YYYY'), TO_DATE('06', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5759.22, 8399.84, 10, TO_DATE('2021', 'YYYY'), TO_DATE('07', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6746.12, 9012.86, 10, TO_DATE('2021', 'YYYY'), TO_DATE('08', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4113.8, 7502.98, 10, TO_DATE('2021', 'YYYY'), TO_DATE('09', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9007.6, 5893.64, 10, TO_DATE('2021', 'YYYY'), TO_DATE('10', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1455.36, 5222.54, 10, TO_DATE('2021', 'YYYY'), TO_DATE('11', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1555.88, 5577.30, 10, TO_DATE('2021', 'YYYY'), TO_DATE('12', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4832.32, 7003.26, 10, TO_DATE('2022', 'YYYY'), TO_DATE('01', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2973.94, 9439.66, 10, TO_DATE('2022', 'YYYY'), TO_DATE('02', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2982.58, 5535.53, 10, TO_DATE('2022', 'YYYY'), TO_DATE('03', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5467.95, 9518.45, 10, TO_DATE('2022', 'YYYY'), TO_DATE('04', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6729.29, 1903.61, 10, TO_DATE('2022', 'YYYY'), TO_DATE('05', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7663.87, 1552.67, 10, TO_DATE('2022', 'YYYY'), TO_DATE('06', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3796.94, 6670.15, 10, TO_DATE('2022', 'YYYY'), TO_DATE('07', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1683.64, 9123.24, 10, TO_DATE('2022', 'YYYY'), TO_DATE('08', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8175.35, 3282.50, 10, TO_DATE('2022', 'YYYY'), TO_DATE('09', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1005.8, 5205.92, 10, TO_DATE('2022', 'YYYY'), TO_DATE('10', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4025.24, 6153.29, 10, TO_DATE('2022', 'YYYY'), TO_DATE('11', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6199.3, 1566.53, 10, TO_DATE('2022', 'YYYY'), TO_DATE('12', 'MM'), 1);
+
+
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9866.55, 8418.70, 11, TO_DATE('2018', 'YYYY'), TO_DATE('01', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9015.96, 3765.8, 11, TO_DATE('2018', 'YYYY'), TO_DATE('02', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7624.71, 1357.81, 11, TO_DATE('2018', 'YYYY'), TO_DATE('03', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5493.50, 4889.25, 11, TO_DATE('2018', 'YYYY'), TO_DATE('04', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1726.59, 8394.23, 11, TO_DATE('2018', 'YYYY'), TO_DATE('05', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2839.26, 4752.7, 11, TO_DATE('2018', 'YYYY'), TO_DATE('06', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6303.15, 7261.62, 11, TO_DATE('2018', 'YYYY'), TO_DATE('07', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5263.2, 3805.77, 11, TO_DATE('2018', 'YYYY'), TO_DATE('08', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2392.2, 9729.78, 11, TO_DATE('2018', 'YYYY'), TO_DATE('09', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7151.37, 6523.72, 11, TO_DATE('2018', 'YYYY'), TO_DATE('10', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3006.55, 8944.55, 11, TO_DATE('2018', 'YYYY'), TO_DATE('11', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6118.25, 3971.78, 11, TO_DATE('2018', 'YYYY'), TO_DATE('12', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6417.96, 9507.27, 11, TO_DATE('2019', 'YYYY'), TO_DATE('01', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4353.63, 4192.43, 11, TO_DATE('2019', 'YYYY'), TO_DATE('02', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8296.72, 8806.58, 11, TO_DATE('2019', 'YYYY'), TO_DATE('03', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6022.91, 3345.74, 11, TO_DATE('2019', 'YYYY'), TO_DATE('04', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4253.62, 6477.22, 11, TO_DATE('2019', 'YYYY'), TO_DATE('05', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7218.22, 7123.59, 11, TO_DATE('2019', 'YYYY'), TO_DATE('06', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2860.45, 8341.64, 11, TO_DATE('2019', 'YYYY'), TO_DATE('07', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4147.37, 8891.23, 11, TO_DATE('2019', 'YYYY'), TO_DATE('08', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8034.88, 3354.71, 11, TO_DATE('2019', 'YYYY'), TO_DATE('09', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8043.50, 3637.95, 11, TO_DATE('2019', 'YYYY'), TO_DATE('10', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9769.44, 3856.85, 11, TO_DATE('2019', 'YYYY'), TO_DATE('11', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7898.39, 5848.14, 11, TO_DATE('2019', 'YYYY'), TO_DATE('12', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5353.20, 8146.8, 11, TO_DATE('2020', 'YYYY'), TO_DATE('01', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2240.80, 2722.46, 11, TO_DATE('2020', 'YYYY'), TO_DATE('02', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6603.3, 1432.17, 11, TO_DATE('2020', 'YYYY'), TO_DATE('03', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6385.23, 1556.80, 11, TO_DATE('2020', 'YYYY'), TO_DATE('04', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3522.29, 2390.12, 11, TO_DATE('2020', 'YYYY'), TO_DATE('05', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2149.88, 5078.79, 11, TO_DATE('2020', 'YYYY'), TO_DATE('06', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6767.98, 9105.62, 11, TO_DATE('2020', 'YYYY'), TO_DATE('07', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2512.42, 7166.44, 11, TO_DATE('2020', 'YYYY'), TO_DATE('08', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2319.76, 3024.42, 11, TO_DATE('2020', 'YYYY'), TO_DATE('09', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1365.40, 5900.73, 11, TO_DATE('2020', 'YYYY'), TO_DATE('10', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5700.72, 4229.4, 11, TO_DATE('2020', 'YYYY'), TO_DATE('11', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5418.35, 1414.3, 11, TO_DATE('2020', 'YYYY'), TO_DATE('12', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5695.2, 6176.12, 11, TO_DATE('2021', 'YYYY'), TO_DATE('01', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3949.49, 3120.28, 11, TO_DATE('2021', 'YYYY'), TO_DATE('02', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5862.21, 8188.5, 11, TO_DATE('2021', 'YYYY'), TO_DATE('03', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8608.10, 4819.69, 11, TO_DATE('2021', 'YYYY'), TO_DATE('04', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6340.22, 6879.41, 11, TO_DATE('2021', 'YYYY'), TO_DATE('05', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9916.69, 9706.74, 11, TO_DATE('2021', 'YYYY'), TO_DATE('06', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9939.98, 9216.17, 11, TO_DATE('2021', 'YYYY'), TO_DATE('07', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4606.2, 8071.71, 11, TO_DATE('2021', 'YYYY'), TO_DATE('08', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5583.58, 8057.27, 11, TO_DATE('2021', 'YYYY'), TO_DATE('09', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6001.18, 2982.11, 11, TO_DATE('2021', 'YYYY'), TO_DATE('10', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2742.31, 6332.41, 11, TO_DATE('2021', 'YYYY'), TO_DATE('11', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5781.10, 5039.96, 11, TO_DATE('2021', 'YYYY'), TO_DATE('12', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5682.82, 9733.48, 11, TO_DATE('2022', 'YYYY'), TO_DATE('01', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8783.92, 9365.36, 11, TO_DATE('2022', 'YYYY'), TO_DATE('02', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4547.57, 1980.97, 11, TO_DATE('2022', 'YYYY'), TO_DATE('03', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8425.15, 6908.66, 11, TO_DATE('2022', 'YYYY'), TO_DATE('04', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9273.27, 7344.15, 11, TO_DATE('2022', 'YYYY'), TO_DATE('05', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3097.90, 7934.47, 11, TO_DATE('2022', 'YYYY'), TO_DATE('06', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5632.59, 6506.34, 11, TO_DATE('2022', 'YYYY'), TO_DATE('07', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3872.77, 7115.76, 11, TO_DATE('2022', 'YYYY'), TO_DATE('08', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8536.33, 5114.60, 11, TO_DATE('2022', 'YYYY'), TO_DATE('09', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7833.80, 8269.29, 11, TO_DATE('2022', 'YYYY'), TO_DATE('10', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2327.42, 2754.8, 11, TO_DATE('2022', 'YYYY'), TO_DATE('11', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1570.93, 5845.9, 11, TO_DATE('2022', 'YYYY'), TO_DATE('12', 'MM'), 6);
+
+
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8708.8, 7765.47, 12, TO_DATE('2018', 'YYYY'), TO_DATE('01', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1563.6, 4163.80, 12, TO_DATE('2018', 'YYYY'), TO_DATE('02', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8859.56, 4516.75, 12, TO_DATE('2018', 'YYYY'), TO_DATE('03', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4602.91, 1711.83, 12, TO_DATE('2018', 'YYYY'), TO_DATE('04', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2580.9, 7940.40, 12, TO_DATE('2018', 'YYYY'), TO_DATE('05', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6382.91, 3417.43, 12, TO_DATE('2018', 'YYYY'), TO_DATE('06', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5338.33, 8500.66, 12, TO_DATE('2018', 'YYYY'), TO_DATE('07', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7771.39, 6528.22, 12, TO_DATE('2018', 'YYYY'), TO_DATE('08', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5161.78, 2041.23, 12, TO_DATE('2018', 'YYYY'), TO_DATE('09', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8276.70, 1540.35, 12, TO_DATE('2018', 'YYYY'), TO_DATE('10', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9762.69, 3238.83, 12, TO_DATE('2018', 'YYYY'), TO_DATE('11', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8701.54, 8329.27, 12, TO_DATE('2018', 'YYYY'), TO_DATE('12', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4952.67, 2445.67, 12, TO_DATE('2019', 'YYYY'), TO_DATE('01', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3871.19, 3639.18, 12, TO_DATE('2019', 'YYYY'), TO_DATE('02', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2296.66, 5097.36, 12, TO_DATE('2019', 'YYYY'), TO_DATE('03', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3104.15, 9246.2, 12, TO_DATE('2019', 'YYYY'), TO_DATE('04', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1278.97, 2960.29, 12, TO_DATE('2019', 'YYYY'), TO_DATE('05', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6311.80, 2753.66, 12, TO_DATE('2019', 'YYYY'), TO_DATE('06', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6914.82, 8484.95, 12, TO_DATE('2019', 'YYYY'), TO_DATE('07', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7879.26, 1663.48, 12, TO_DATE('2019', 'YYYY'), TO_DATE('08', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3256.15, 3244.69, 12, TO_DATE('2019', 'YYYY'), TO_DATE('09', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4528.98, 9638.41, 12, TO_DATE('2019', 'YYYY'), TO_DATE('10', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4778.56, 3182.45, 12, TO_DATE('2019', 'YYYY'), TO_DATE('11', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9695.46, 5261.78, 12, TO_DATE('2019', 'YYYY'), TO_DATE('12', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3880.77, 7686.13, 12, TO_DATE('2020', 'YYYY'), TO_DATE('01', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8019.91, 1455.45, 12, TO_DATE('2020', 'YYYY'), TO_DATE('02', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8404.30, 1377.3, 12, TO_DATE('2020', 'YYYY'), TO_DATE('03', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5205.80, 5461.13, 12, TO_DATE('2020', 'YYYY'), TO_DATE('04', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3701.92, 3392.20, 12, TO_DATE('2020', 'YYYY'), TO_DATE('05', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8697.90, 6266.9, 12, TO_DATE('2020', 'YYYY'), TO_DATE('06', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9031.29, 8478.38, 12, TO_DATE('2020', 'YYYY'), TO_DATE('07', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6468.27, 4905.74, 12, TO_DATE('2020', 'YYYY'), TO_DATE('08', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1297.62, 6994.84, 12, TO_DATE('2020', 'YYYY'), TO_DATE('09', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8478.72, 2750.91, 12, TO_DATE('2020', 'YYYY'), TO_DATE('10', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4549.96, 3993.44, 12, TO_DATE('2020', 'YYYY'), TO_DATE('11', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1278.91, 8592.35, 12, TO_DATE('2020', 'YYYY'), TO_DATE('12', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6140.46, 5590.21, 12, TO_DATE('2021', 'YYYY'), TO_DATE('01', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7998.52, 8267.60, 12, TO_DATE('2021', 'YYYY'), TO_DATE('02', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4264.73, 3515.23, 12, TO_DATE('2021', 'YYYY'), TO_DATE('03', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7793.53, 3541.16, 12, TO_DATE('2021', 'YYYY'), TO_DATE('04', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8974.92, 8950.21, 12, TO_DATE('2021', 'YYYY'), TO_DATE('05', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6870.52, 8307.16, 12, TO_DATE('2021', 'YYYY'), TO_DATE('06', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7313.76, 3703.50, 12, TO_DATE('2021', 'YYYY'), TO_DATE('07', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6027.40, 4787.35, 12, TO_DATE('2021', 'YYYY'), TO_DATE('08', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8120.83, 3752.68, 12, TO_DATE('2021', 'YYYY'), TO_DATE('09', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4839.9, 6854.27, 12, TO_DATE('2021', 'YYYY'), TO_DATE('10', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8274.61, 6834.21, 12, TO_DATE('2021', 'YYYY'), TO_DATE('11', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4892.41, 7063.22, 12, TO_DATE('2021', 'YYYY'), TO_DATE('12', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3924.1, 9007.36, 12, TO_DATE('2022', 'YYYY'), TO_DATE('01', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6791.54, 5700.33, 12, TO_DATE('2022', 'YYYY'), TO_DATE('02', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1184.51, 6826.75, 12, TO_DATE('2022', 'YYYY'), TO_DATE('03', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5200.15, 3127.77, 12, TO_DATE('2022', 'YYYY'), TO_DATE('04', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4898.34, 5834.71, 12, TO_DATE('2022', 'YYYY'), TO_DATE('05', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7607.70, 4375.69, 12, TO_DATE('2022', 'YYYY'), TO_DATE('06', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6125.4, 2771.56, 12, TO_DATE('2022', 'YYYY'), TO_DATE('07', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8629.79, 6438.92, 12, TO_DATE('2022', 'YYYY'), TO_DATE('08', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5560.20, 2985.6, 12, TO_DATE('2022', 'YYYY'), TO_DATE('09', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9308.1, 5615.81, 12, TO_DATE('2022', 'YYYY'), TO_DATE('10', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5801.10, 6985.53, 12, TO_DATE('2022', 'YYYY'), TO_DATE('11', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3911.10, 4040.5, 12, TO_DATE('2022', 'YYYY'), TO_DATE('12', 'MM'), 9);
+
+
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4897.29, 4575.24, 13, TO_DATE('2018', 'YYYY'), TO_DATE('01', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7814.39, 1689.66, 13, TO_DATE('2018', 'YYYY'), TO_DATE('02', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1728.10, 9495.19, 13, TO_DATE('2018', 'YYYY'), TO_DATE('03', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8023.10, 5023.15, 13, TO_DATE('2018', 'YYYY'), TO_DATE('04', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4325.71, 1327.29, 13, TO_DATE('2018', 'YYYY'), TO_DATE('05', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6858.91, 9223.43, 13, TO_DATE('2018', 'YYYY'), TO_DATE('06', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2984.15, 7232.68, 13, TO_DATE('2018', 'YYYY'), TO_DATE('07', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8795.12, 2540.72, 13, TO_DATE('2018', 'YYYY'), TO_DATE('08', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5070.94, 3072.27, 13, TO_DATE('2018', 'YYYY'), TO_DATE('09', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3847.8, 4089.93, 13, TO_DATE('2018', 'YYYY'), TO_DATE('10', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9193.53, 7986.31, 13, TO_DATE('2018', 'YYYY'), TO_DATE('11', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3067.61, 3398.48, 13, TO_DATE('2018', 'YYYY'), TO_DATE('12', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8990.14, 7439.40, 13, TO_DATE('2019', 'YYYY'), TO_DATE('01', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7678.59, 1444.51, 13, TO_DATE('2019', 'YYYY'), TO_DATE('02', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2898.84, 3704.87, 13, TO_DATE('2019', 'YYYY'), TO_DATE('03', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3880.18, 7199.98, 13, TO_DATE('2019', 'YYYY'), TO_DATE('04', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3890.59, 6899.36, 13, TO_DATE('2019', 'YYYY'), TO_DATE('05', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6410.19, 5655.59, 13, TO_DATE('2019', 'YYYY'), TO_DATE('06', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4538.38, 2371.41, 13, TO_DATE('2019', 'YYYY'), TO_DATE('07', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9639.11, 2666.74, 13, TO_DATE('2019', 'YYYY'), TO_DATE('08', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2694.78, 7112.59, 13, TO_DATE('2019', 'YYYY'), TO_DATE('09', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6182.24, 1942.42, 13, TO_DATE('2019', 'YYYY'), TO_DATE('10', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1251.95, 6875.85, 13, TO_DATE('2019', 'YYYY'), TO_DATE('11', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3890.33, 3646.5, 13, TO_DATE('2019', 'YYYY'), TO_DATE('12', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2325.70, 6815.1, 13, TO_DATE('2020', 'YYYY'), TO_DATE('01', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4277.70, 9622.76, 13, TO_DATE('2020', 'YYYY'), TO_DATE('02', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4003.59, 2307.76, 13, TO_DATE('2020', 'YYYY'), TO_DATE('03', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4500.23, 2778.57, 13, TO_DATE('2020', 'YYYY'), TO_DATE('04', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3745.14, 8182.19, 13, TO_DATE('2020', 'YYYY'), TO_DATE('05', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2259.90, 5375.77, 13, TO_DATE('2020', 'YYYY'), TO_DATE('06', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7788.85, 8024.71, 13, TO_DATE('2020', 'YYYY'), TO_DATE('07', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3554.77, 9392.64, 13, TO_DATE('2020', 'YYYY'), TO_DATE('08', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8338.80, 3400.9, 13, TO_DATE('2020', 'YYYY'), TO_DATE('09', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7993.35, 8711.32, 13, TO_DATE('2020', 'YYYY'), TO_DATE('10', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4757.24, 3856.79, 13, TO_DATE('2020', 'YYYY'), TO_DATE('11', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6715.15, 5869.5, 13, TO_DATE('2020', 'YYYY'), TO_DATE('12', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7854.40, 1984.98, 13, TO_DATE('2021', 'YYYY'), TO_DATE('01', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2322.93, 7283.94, 13, TO_DATE('2021', 'YYYY'), TO_DATE('02', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6922.77, 7672.10, 13, TO_DATE('2021', 'YYYY'), TO_DATE('03', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6673.38, 6468.47, 13, TO_DATE('2021', 'YYYY'), TO_DATE('04', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7529.76, 3548.72, 13, TO_DATE('2021', 'YYYY'), TO_DATE('05', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3717.84, 4358.83, 13, TO_DATE('2021', 'YYYY'), TO_DATE('06', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5218.48, 2446.89, 13, TO_DATE('2021', 'YYYY'), TO_DATE('07', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9084.28, 7024.60, 13, TO_DATE('2021', 'YYYY'), TO_DATE('08', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3256.47, 1568.40, 13, TO_DATE('2021', 'YYYY'), TO_DATE('09', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5726.45, 8221.21, 13, TO_DATE('2021', 'YYYY'), TO_DATE('10', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5795.30, 1411.11, 13, TO_DATE('2021', 'YYYY'), TO_DATE('11', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6221.64, 2039.80, 13, TO_DATE('2021', 'YYYY'), TO_DATE('12', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5893.32, 5022.30, 13, TO_DATE('2022', 'YYYY'), TO_DATE('01', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3321.63, 7323.71, 13, TO_DATE('2022', 'YYYY'), TO_DATE('02', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8498.11, 1756.57, 13, TO_DATE('2022', 'YYYY'), TO_DATE('03', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8052.8, 2631.71, 13, TO_DATE('2022', 'YYYY'), TO_DATE('04', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1988.77, 1927.54, 13, TO_DATE('2022', 'YYYY'), TO_DATE('05', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1320.50, 4814.3, 13, TO_DATE('2022', 'YYYY'), TO_DATE('06', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1941.51, 3955.65, 13, TO_DATE('2022', 'YYYY'), TO_DATE('07', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8179.24, 5615.37, 13, TO_DATE('2022', 'YYYY'), TO_DATE('08', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1257.65, 4151.75, 13, TO_DATE('2022', 'YYYY'), TO_DATE('09', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7718.95, 2028.34, 13, TO_DATE('2022', 'YYYY'), TO_DATE('10', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3753.31, 1478.94, 13, TO_DATE('2022', 'YYYY'), TO_DATE('11', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1343.36, 5434.54, 13, TO_DATE('2022', 'YYYY'), TO_DATE('12', 'MM'), 3);
+
+
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3361.29, 3164.20, 14, TO_DATE('2018', 'YYYY'), TO_DATE('01', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7830.69, 7061.39, 14, TO_DATE('2018', 'YYYY'), TO_DATE('02', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8980.50, 6148.3, 14, TO_DATE('2018', 'YYYY'), TO_DATE('03', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6355.94, 7331.2, 14, TO_DATE('2018', 'YYYY'), TO_DATE('04', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7864.60, 4271.32, 14, TO_DATE('2018', 'YYYY'), TO_DATE('05', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2590.44, 1957.30, 14, TO_DATE('2018', 'YYYY'), TO_DATE('06', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3980.15, 4629.46, 14, TO_DATE('2018', 'YYYY'), TO_DATE('07', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8858.18, 6908.70, 14, TO_DATE('2018', 'YYYY'), TO_DATE('08', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5519.17, 8097.21, 14, TO_DATE('2018', 'YYYY'), TO_DATE('09', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6942.85, 3190.64, 14, TO_DATE('2018', 'YYYY'), TO_DATE('10', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3493.49, 1951.76, 14, TO_DATE('2018', 'YYYY'), TO_DATE('11', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7525.80, 2512.70, 14, TO_DATE('2018', 'YYYY'), TO_DATE('12', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8393.71, 3195.72, 14, TO_DATE('2019', 'YYYY'), TO_DATE('01', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8045.2, 2656.30, 14, TO_DATE('2019', 'YYYY'), TO_DATE('02', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1297.96, 1578.3, 14, TO_DATE('2019', 'YYYY'), TO_DATE('03', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9313.58, 4071.65, 14, TO_DATE('2019', 'YYYY'), TO_DATE('04', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8237.93, 8486.3, 14, TO_DATE('2019', 'YYYY'), TO_DATE('05', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7690.21, 1160.73, 14, TO_DATE('2019', 'YYYY'), TO_DATE('06', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2028.75, 2227.88, 14, TO_DATE('2019', 'YYYY'), TO_DATE('07', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7302.13, 7494.35, 14, TO_DATE('2019', 'YYYY'), TO_DATE('08', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3409.79, 8811.12, 14, TO_DATE('2019', 'YYYY'), TO_DATE('09', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1798.47, 5118.60, 14, TO_DATE('2019', 'YYYY'), TO_DATE('10', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1576.12, 5845.76, 14, TO_DATE('2019', 'YYYY'), TO_DATE('11', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7873.97, 6944.66, 14, TO_DATE('2019', 'YYYY'), TO_DATE('12', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8346.41, 3646.90, 14, TO_DATE('2020', 'YYYY'), TO_DATE('01', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6411.59, 5493.27, 14, TO_DATE('2020', 'YYYY'), TO_DATE('02', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4189.21, 4391.57, 14, TO_DATE('2020', 'YYYY'), TO_DATE('03', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1669.73, 4686.62, 14, TO_DATE('2020', 'YYYY'), TO_DATE('04', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5280.98, 6443.92, 14, TO_DATE('2020', 'YYYY'), TO_DATE('05', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3653.10, 2639.9, 14, TO_DATE('2020', 'YYYY'), TO_DATE('06', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3277.23, 4499.53, 14, TO_DATE('2020', 'YYYY'), TO_DATE('07', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8236.38, 1769.56, 14, TO_DATE('2020', 'YYYY'), TO_DATE('08', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2635.64, 8693.82, 14, TO_DATE('2020', 'YYYY'), TO_DATE('09', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3375.24, 7800.63, 14, TO_DATE('2020', 'YYYY'), TO_DATE('10', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1662.42, 9806.82, 14, TO_DATE('2020', 'YYYY'), TO_DATE('11', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9168.90, 5000.41, 14, TO_DATE('2020', 'YYYY'), TO_DATE('12', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4337.50, 7202.39, 14, TO_DATE('2021', 'YYYY'), TO_DATE('01', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5851.76, 1563.73, 14, TO_DATE('2021', 'YYYY'), TO_DATE('02', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1528.95, 3307.79, 14, TO_DATE('2021', 'YYYY'), TO_DATE('03', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5321.1, 2240.93, 14, TO_DATE('2021', 'YYYY'), TO_DATE('04', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1659.64, 6946.84, 14, TO_DATE('2021', 'YYYY'), TO_DATE('05', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6014.70, 9046.72, 14, TO_DATE('2021', 'YYYY'), TO_DATE('06', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7269.57, 7858.83, 14, TO_DATE('2021', 'YYYY'), TO_DATE('07', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3359.85, 7430.45, 14, TO_DATE('2021', 'YYYY'), TO_DATE('08', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5223.42, 5956.9, 14, TO_DATE('2021', 'YYYY'), TO_DATE('09', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4630.93, 1432.69, 14, TO_DATE('2021', 'YYYY'), TO_DATE('10', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2722.36, 1971.29, 14, TO_DATE('2021', 'YYYY'), TO_DATE('11', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3518.39, 4663.59, 14, TO_DATE('2021', 'YYYY'), TO_DATE('12', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1745.18, 6459.19, 14, TO_DATE('2022', 'YYYY'), TO_DATE('01', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6335.70, 6450.77, 14, TO_DATE('2022', 'YYYY'), TO_DATE('02', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5109.25, 6873.94, 14, TO_DATE('2022', 'YYYY'), TO_DATE('03', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6866.16, 3794.75, 14, TO_DATE('2022', 'YYYY'), TO_DATE('04', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6960.64, 2135.78, 14, TO_DATE('2022', 'YYYY'), TO_DATE('05', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9492.41, 8535.22, 14, TO_DATE('2022', 'YYYY'), TO_DATE('06', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4420.13, 3007.6, 14, TO_DATE('2022', 'YYYY'), TO_DATE('07', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3853.55, 6403.44, 14, TO_DATE('2022', 'YYYY'), TO_DATE('08', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2931.87, 9420.21, 14, TO_DATE('2022', 'YYYY'), TO_DATE('09', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1587.82, 1638.45, 14, TO_DATE('2022', 'YYYY'), TO_DATE('10', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9084.30, 3800.52, 14, TO_DATE('2022', 'YYYY'), TO_DATE('11', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6481.21, 9750.32, 14, TO_DATE('2022', 'YYYY'), TO_DATE('12', 'MM'), 6);
+
+
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8215.18, 3469.26, 15, TO_DATE('2018', 'YYYY'), TO_DATE('01', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4994.69, 3095.7, 15, TO_DATE('2018', 'YYYY'), TO_DATE('02', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2466.55, 2229.83, 15, TO_DATE('2018', 'YYYY'), TO_DATE('03', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5372.48, 7023.49, 15, TO_DATE('2018', 'YYYY'), TO_DATE('04', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6156.52, 5981.66, 15, TO_DATE('2018', 'YYYY'), TO_DATE('05', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5488.53, 5533.29, 15, TO_DATE('2018', 'YYYY'), TO_DATE('06', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9841.18, 2604.19, 15, TO_DATE('2018', 'YYYY'), TO_DATE('07', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4926.5, 7576.41, 15, TO_DATE('2018', 'YYYY'), TO_DATE('08', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7267.81, 8562.24, 15, TO_DATE('2018', 'YYYY'), TO_DATE('09', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4186.77, 6605.67, 15, TO_DATE('2018', 'YYYY'), TO_DATE('10', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6927.76, 3228.67, 15, TO_DATE('2018', 'YYYY'), TO_DATE('11', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5600.83, 2842.36, 15, TO_DATE('2018', 'YYYY'), TO_DATE('12', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7451.96, 2550.90, 15, TO_DATE('2019', 'YYYY'), TO_DATE('01', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3666.35, 1077.79, 15, TO_DATE('2019', 'YYYY'), TO_DATE('02', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6103.48, 6379.47, 15, TO_DATE('2019', 'YYYY'), TO_DATE('03', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8595.28, 5470.38, 15, TO_DATE('2019', 'YYYY'), TO_DATE('04', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5161.73, 4701.16, 15, TO_DATE('2019', 'YYYY'), TO_DATE('05', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2386.92, 6179.18, 15, TO_DATE('2019', 'YYYY'), TO_DATE('06', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5269.94, 5452.28, 15, TO_DATE('2019', 'YYYY'), TO_DATE('07', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8602.6, 9841.95, 15, TO_DATE('2019', 'YYYY'), TO_DATE('08', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7874.89, 1233.43, 15, TO_DATE('2019', 'YYYY'), TO_DATE('09', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1218.15, 1854.45, 15, TO_DATE('2019', 'YYYY'), TO_DATE('10', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8700.85, 5011.93, 15, TO_DATE('2019', 'YYYY'), TO_DATE('11', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3375.37, 2144.59, 15, TO_DATE('2019', 'YYYY'), TO_DATE('12', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3819.63, 2932.13, 15, TO_DATE('2020', 'YYYY'), TO_DATE('01', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6351.63, 5080.67, 15, TO_DATE('2020', 'YYYY'), TO_DATE('02', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8385.32, 3258.55, 15, TO_DATE('2020', 'YYYY'), TO_DATE('03', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1806.31, 3143.5, 15, TO_DATE('2020', 'YYYY'), TO_DATE('04', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3739.11, 7959.11, 15, TO_DATE('2020', 'YYYY'), TO_DATE('05', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4013.20, 6183.57, 15, TO_DATE('2020', 'YYYY'), TO_DATE('06', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8064.78, 5150.71, 15, TO_DATE('2020', 'YYYY'), TO_DATE('07', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4734.56, 9136.17, 15, TO_DATE('2020', 'YYYY'), TO_DATE('08', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1413.9, 9824.60, 15, TO_DATE('2020', 'YYYY'), TO_DATE('09', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5994.15, 1183.58, 15, TO_DATE('2020', 'YYYY'), TO_DATE('10', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5636.79, 4148.42, 15, TO_DATE('2020', 'YYYY'), TO_DATE('11', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7510.67, 7953.63, 15, TO_DATE('2020', 'YYYY'), TO_DATE('12', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8107.41, 6680.9, 15, TO_DATE('2021', 'YYYY'), TO_DATE('01', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9274.77, 3347.32, 15, TO_DATE('2021', 'YYYY'), TO_DATE('02', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3778.47, 6302.62, 15, TO_DATE('2021', 'YYYY'), TO_DATE('03', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8356.93, 8464.32, 15, TO_DATE('2021', 'YYYY'), TO_DATE('04', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4648.41, 5523.74, 15, TO_DATE('2021', 'YYYY'), TO_DATE('05', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3195.57, 6213.45, 15, TO_DATE('2021', 'YYYY'), TO_DATE('06', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5364.64, 9432.38, 15, TO_DATE('2021', 'YYYY'), TO_DATE('07', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7711.12, 6090.80, 15, TO_DATE('2021', 'YYYY'), TO_DATE('08', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6750.77, 8283.1, 15, TO_DATE('2021', 'YYYY'), TO_DATE('09', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4611.73, 2097.51, 15, TO_DATE('2021', 'YYYY'), TO_DATE('10', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1717.67, 1075.67, 15, TO_DATE('2021', 'YYYY'), TO_DATE('11', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4409.18, 2736.95, 15, TO_DATE('2021', 'YYYY'), TO_DATE('12', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3494.4, 5933.87, 15, TO_DATE('2022', 'YYYY'), TO_DATE('01', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1450.39, 1669.55, 15, TO_DATE('2022', 'YYYY'), TO_DATE('02', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8878.44, 7425.84, 15, TO_DATE('2022', 'YYYY'), TO_DATE('03', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5528.52, 7270.92, 15, TO_DATE('2022', 'YYYY'), TO_DATE('04', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9802.30, 6274.97, 15, TO_DATE('2022', 'YYYY'), TO_DATE('05', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8652.86, 4759.74, 15, TO_DATE('2022', 'YYYY'), TO_DATE('06', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1003.54, 5194.13, 15, TO_DATE('2022', 'YYYY'), TO_DATE('07', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8121.22, 9306.57, 15, TO_DATE('2022', 'YYYY'), TO_DATE('08', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6877.82, 2628.39, 15, TO_DATE('2022', 'YYYY'), TO_DATE('09', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3542.95, 2690.16, 15, TO_DATE('2022', 'YYYY'), TO_DATE('10', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7989.61, 5258.8, 15, TO_DATE('2022', 'YYYY'), TO_DATE('11', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7187.18, 6724.75, 15, TO_DATE('2022', 'YYYY'), TO_DATE('12', 'MM'), 9);
+
+
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2802.64, 6454.54, 16, TO_DATE('2018', 'YYYY'), TO_DATE('01', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8265.35, 1184.49, 16, TO_DATE('2018', 'YYYY'), TO_DATE('02', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6605.83, 6352.33, 16, TO_DATE('2018', 'YYYY'), TO_DATE('03', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3880.20, 9855.39, 16, TO_DATE('2018', 'YYYY'), TO_DATE('04', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5844.24, 8111.51, 16, TO_DATE('2018', 'YYYY'), TO_DATE('05', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4740.77, 1353.2, 16, TO_DATE('2018', 'YYYY'), TO_DATE('06', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4046.65, 2768.64, 16, TO_DATE('2018', 'YYYY'), TO_DATE('07', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9677.65, 7618.41, 16, TO_DATE('2018', 'YYYY'), TO_DATE('08', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9923.73, 5532.58, 16, TO_DATE('2018', 'YYYY'), TO_DATE('09', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8168.97, 2539.66, 16, TO_DATE('2018', 'YYYY'), TO_DATE('10', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8254.59, 6184.62, 16, TO_DATE('2018', 'YYYY'), TO_DATE('11', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9195.79, 8395.44, 16, TO_DATE('2018', 'YYYY'), TO_DATE('12', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2148.67, 7607.19, 16, TO_DATE('2019', 'YYYY'), TO_DATE('01', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5916.28, 7477.42, 16, TO_DATE('2019', 'YYYY'), TO_DATE('02', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2884.28, 7950.76, 16, TO_DATE('2019', 'YYYY'), TO_DATE('03', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2035.49, 6416.86, 16, TO_DATE('2019', 'YYYY'), TO_DATE('04', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4817.69, 9956.18, 16, TO_DATE('2019', 'YYYY'), TO_DATE('05', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1448.3, 2275.8, 16, TO_DATE('2019', 'YYYY'), TO_DATE('06', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9188.54, 4567.50, 16, TO_DATE('2019', 'YYYY'), TO_DATE('07', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1651.42, 8889.28, 16, TO_DATE('2019', 'YYYY'), TO_DATE('08', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3702.36, 9729.82, 16, TO_DATE('2019', 'YYYY'), TO_DATE('09', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6769.23, 8452.49, 16, TO_DATE('2019', 'YYYY'), TO_DATE('10', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4172.68, 1643.45, 16, TO_DATE('2019', 'YYYY'), TO_DATE('11', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8925.84, 7223.51, 16, TO_DATE('2019', 'YYYY'), TO_DATE('12', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8877.47, 8079.34, 16, TO_DATE('2020', 'YYYY'), TO_DATE('01', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9103.56, 3239.58, 16, TO_DATE('2020', 'YYYY'), TO_DATE('02', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6208.93, 6493.66, 16, TO_DATE('2020', 'YYYY'), TO_DATE('03', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2215.16, 6508.12, 16, TO_DATE('2020', 'YYYY'), TO_DATE('04', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1035.66, 9965.16, 16, TO_DATE('2020', 'YYYY'), TO_DATE('05', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5281.37, 6272.70, 16, TO_DATE('2020', 'YYYY'), TO_DATE('06', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3606.2, 3754.97, 16, TO_DATE('2020', 'YYYY'), TO_DATE('07', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9487.64, 5343.61, 16, TO_DATE('2020', 'YYYY'), TO_DATE('08', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1274.89, 7826.17, 16, TO_DATE('2020', 'YYYY'), TO_DATE('09', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8559.44, 9363.69, 16, TO_DATE('2020', 'YYYY'), TO_DATE('10', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2077.52, 4469.92, 16, TO_DATE('2020', 'YYYY'), TO_DATE('11', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2079.39, 3337.48, 16, TO_DATE('2020', 'YYYY'), TO_DATE('12', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3417.98, 9789.89, 16, TO_DATE('2021', 'YYYY'), TO_DATE('01', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8273.15, 7175.75, 16, TO_DATE('2021', 'YYYY'), TO_DATE('02', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9688.47, 2475.87, 16, TO_DATE('2021', 'YYYY'), TO_DATE('03', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9228.72, 6285.87, 16, TO_DATE('2021', 'YYYY'), TO_DATE('04', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2094.60, 1610.12, 16, TO_DATE('2021', 'YYYY'), TO_DATE('05', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8178.48, 7983.69, 16, TO_DATE('2021', 'YYYY'), TO_DATE('06', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9478.95, 9199.78, 16, TO_DATE('2021', 'YYYY'), TO_DATE('07', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1529.19, 3014.82, 16, TO_DATE('2021', 'YYYY'), TO_DATE('08', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1392.54, 9495.61, 16, TO_DATE('2021', 'YYYY'), TO_DATE('09', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6683.65, 5595.4, 16, TO_DATE('2021', 'YYYY'), TO_DATE('10', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8880.24, 2230.13, 16, TO_DATE('2021', 'YYYY'), TO_DATE('11', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2241.29, 4645.37, 16, TO_DATE('2021', 'YYYY'), TO_DATE('12', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8164.10, 4807.84, 16, TO_DATE('2022', 'YYYY'), TO_DATE('01', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2660.94, 6209.41, 16, TO_DATE('2022', 'YYYY'), TO_DATE('02', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7618.16, 5643.29, 16, TO_DATE('2022', 'YYYY'), TO_DATE('03', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1234.78, 8784.73, 16, TO_DATE('2022', 'YYYY'), TO_DATE('04', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3167.72, 8823.47, 16, TO_DATE('2022', 'YYYY'), TO_DATE('05', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5049.91, 5723.75, 16, TO_DATE('2022', 'YYYY'), TO_DATE('06', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5080.82, 2261.82, 16, TO_DATE('2022', 'YYYY'), TO_DATE('07', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9482.68, 6564.75, 16, TO_DATE('2022', 'YYYY'), TO_DATE('08', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6281.30, 9067.9, 16, TO_DATE('2022', 'YYYY'), TO_DATE('09', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7704.75, 4025.94, 16, TO_DATE('2022', 'YYYY'), TO_DATE('10', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8546.3, 2181.4, 16, TO_DATE('2022', 'YYYY'), TO_DATE('11', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6165.36, 5290.50, 16, TO_DATE('2022', 'YYYY'), TO_DATE('12', 'MM'), 9);
+
+
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5218.35, 8067.8, 17, TO_DATE('2018', 'YYYY'), TO_DATE('01', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7318.11, 9762.80, 17, TO_DATE('2018', 'YYYY'), TO_DATE('02', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2703.6, 4433.93, 17, TO_DATE('2018', 'YYYY'), TO_DATE('03', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5273.58, 3468.53, 17, TO_DATE('2018', 'YYYY'), TO_DATE('04', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4771.34, 4732.72, 17, TO_DATE('2018', 'YYYY'), TO_DATE('05', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3821.98, 9991.80, 17, TO_DATE('2018', 'YYYY'), TO_DATE('06', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7944.20, 3737.45, 17, TO_DATE('2018', 'YYYY'), TO_DATE('07', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9583.90, 2083.44, 17, TO_DATE('2018', 'YYYY'), TO_DATE('08', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1925.92, 3609.90, 17, TO_DATE('2018', 'YYYY'), TO_DATE('09', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7909.20, 9192.25, 17, TO_DATE('2018', 'YYYY'), TO_DATE('10', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5747.4, 1811.29, 17, TO_DATE('2018', 'YYYY'), TO_DATE('11', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5305.31, 3747.49, 17, TO_DATE('2018', 'YYYY'), TO_DATE('12', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4827.96, 1159.65, 17, TO_DATE('2019', 'YYYY'), TO_DATE('01', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9541.1, 8965.82, 17, TO_DATE('2019', 'YYYY'), TO_DATE('02', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4294.69, 1344.10, 17, TO_DATE('2019', 'YYYY'), TO_DATE('03', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1032.66, 9672.16, 17, TO_DATE('2019', 'YYYY'), TO_DATE('04', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8162.90, 6512.24, 17, TO_DATE('2019', 'YYYY'), TO_DATE('05', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7059.79, 4255.87, 17, TO_DATE('2019', 'YYYY'), TO_DATE('06', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5525.36, 8585.93, 17, TO_DATE('2019', 'YYYY'), TO_DATE('07', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6897.4, 7062.28, 17, TO_DATE('2019', 'YYYY'), TO_DATE('08', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2855.61, 2381.84, 17, TO_DATE('2019', 'YYYY'), TO_DATE('09', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7901.43, 1020.67, 17, TO_DATE('2019', 'YYYY'), TO_DATE('10', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5698.62, 9600.64, 17, TO_DATE('2019', 'YYYY'), TO_DATE('11', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3241.34, 7561.74, 17, TO_DATE('2019', 'YYYY'), TO_DATE('12', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1092.73, 2485.40, 17, TO_DATE('2020', 'YYYY'), TO_DATE('01', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9158.47, 7702.78, 17, TO_DATE('2020', 'YYYY'), TO_DATE('02', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6287.71, 4763.53, 17, TO_DATE('2020', 'YYYY'), TO_DATE('03', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2598.90, 2417.85, 17, TO_DATE('2020', 'YYYY'), TO_DATE('04', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8839.35, 8821.21, 17, TO_DATE('2020', 'YYYY'), TO_DATE('05', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5623.33, 8335.53, 17, TO_DATE('2020', 'YYYY'), TO_DATE('06', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3671.33, 4359.65, 17, TO_DATE('2020', 'YYYY'), TO_DATE('07', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2334.16, 1519.7, 17, TO_DATE('2020', 'YYYY'), TO_DATE('08', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4917.30, 1352.41, 17, TO_DATE('2020', 'YYYY'), TO_DATE('09', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(3305.6, 3250.6, 17, TO_DATE('2020', 'YYYY'), TO_DATE('10', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4641.57, 8936.20, 17, TO_DATE('2020', 'YYYY'), TO_DATE('11', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6344.67, 4586.94, 17, TO_DATE('2020', 'YYYY'), TO_DATE('12', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6475.71, 7474.67, 17, TO_DATE('2021', 'YYYY'), TO_DATE('01', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7876.2, 7636.49, 17, TO_DATE('2021', 'YYYY'), TO_DATE('02', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(5554.75, 4217.67, 17, TO_DATE('2021', 'YYYY'), TO_DATE('03', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9588.24, 3229.91, 17, TO_DATE('2021', 'YYYY'), TO_DATE('04', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2649.38, 1963.17, 17, TO_DATE('2021', 'YYYY'), TO_DATE('05', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1043.74, 6706.19, 17, TO_DATE('2021', 'YYYY'), TO_DATE('06', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(2327.94, 2893.17, 17, TO_DATE('2021', 'YYYY'), TO_DATE('07', 'MM'), 7);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(9521.5, 6785.42, 17, TO_DATE('2021', 'YYYY'), TO_DATE('08', 'MM'), 5);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6442.86, 8082.94, 17, TO_DATE('2021', 'YYYY'), TO_DATE('09', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4648.16, 4017.54, 17, TO_DATE('2021', 'YYYY'), TO_DATE('10', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8295.5, 2241.69, 17, TO_DATE('2021', 'YYYY'), TO_DATE('11', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(7658.92, 9133.21, 17, TO_DATE('2021', 'YYYY'), TO_DATE('12', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1116.76, 1803.38, 17, TO_DATE('2022', 'YYYY'), TO_DATE('01', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8385.2, 1404.20, 17, TO_DATE('2022', 'YYYY'), TO_DATE('02', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6178.56, 4204.15, 17, TO_DATE('2022', 'YYYY'), TO_DATE('03', 'MM'), 6);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6158.29, 5584.50, 17, TO_DATE('2022', 'YYYY'), TO_DATE('04', 'MM'), 1);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(1512.70, 2745.1, 17, TO_DATE('2022', 'YYYY'), TO_DATE('05', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8536.31, 1902.78, 17, TO_DATE('2022', 'YYYY'), TO_DATE('06', 'MM'), 3);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8314.5, 4375.48, 17, TO_DATE('2022', 'YYYY'), TO_DATE('07', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8640.93, 1391.39, 17, TO_DATE('2022', 'YYYY'), TO_DATE('08', 'MM'), 4);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8501.40, 5099.19, 17, TO_DATE('2022', 'YYYY'), TO_DATE('09', 'MM'), 9);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(4195.2, 5125.10, 17, TO_DATE('2022', 'YYYY'), TO_DATE('10', 'MM'), 8);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(6087.51, 7034.56, 17, TO_DATE('2022', 'YYYY'), TO_DATE('11', 'MM'), 2);
+INSERT INTO DadosNegocio(producaoEmToneladas, vendasEmMilharesEuros, idCultura, anoTempo, mesTempo, codigoInternoCliente) VALUES(8542.77, 6245.94, 17, TO_DATE('2022', 'YYYY'), TO_DATE('12', 'MM'), 9);

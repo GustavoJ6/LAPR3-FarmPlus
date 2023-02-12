@@ -1,0 +1,1 @@
+void printMatrix(int matrix[6][3]);

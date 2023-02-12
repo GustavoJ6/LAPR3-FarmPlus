@@ -1,0 +1,1 @@
+uint64_t* dev_random(uint64_t buffer[]);

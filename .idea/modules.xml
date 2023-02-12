@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ESINF/App.iml" filepath="$PROJECT_DIR$/ESINF/App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sem3pi2022_23_g001.iml" filepath="$PROJECT_DIR$/.idea/sem3pi2022_23_g001.iml" />
+    </modules>
+  </component>
+</project>

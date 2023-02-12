@@ -1,0 +1,1 @@
+void set_all_sensors(Restrictions *restrict_sensor, unsigned long *frequencies, unsigned char *sensor_types, int *sensor_amounts, Sensor *temperature_sensors, Sensor *wind_speed_sensors, Sensor *wind_direction_sensors, Sensor *pluviosity_sensors, Sensor *atmospheric_humidity_sensors, Sensor *soil_humidity_sensors);

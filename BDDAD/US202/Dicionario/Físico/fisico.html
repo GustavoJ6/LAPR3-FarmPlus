@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="fisico.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Físico</title>
+</head>
+<body>
+
+
+<header>
+    <div class="nav01">
+        <div class="name">Base de Dados</div>
+    </div>
+
+    <div class="nav02">
+        <div class="text01">FÍSICO</div>
+
+        <ul class="ul01">
+            <li><a href="../index.html">Tabelas</a></li>
+            <li><a href="../Conceptual/conceptual.html">Conceptual</a></li>
+            <li><a href="../Lógico/logico.html">Lógico</a></li>
+            <li><a href="#">Físico</a></li>
+        </ul>
+
+
+    </div>
+</header>
+
+
+
+<main>
+
+    </br>
+
+    <div class="box">
+        <pre>
+            <code class="language-html">
+<span class="red">CREATE TABLE</span> <span class="purple">GestorAgricola</span> (
+    idGestorAgricola    <span class="red">INTEGER</span>    <span class="red">CONSTRAINT</span> pk_GestorAgricola_idGestorAgricola <span class="red">PRIMARY KEY</span>
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">ExploracaoAgricola</span> (
+    idExploracaoAgricola    <span class="red">INTEGER</span>    <span class="red">CONSTRAINT</span> pk_ExploracaoAgricola_idExploracaoAgricola <span class="red">PRIMARY KEY</span>,
+    idGestorAgricola        <span class="red">INTEGER</span>
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">Cliente</span> (
+    codigoInterno       <span class="red">INTEGER</span>     <span class="red">GENERATED ALWAYS AS IDENTITY CONSTRAINT</span> pk_Cliente_codigoInterno <span class="red">PRIMARY KEY</span>,
+    email               <span class="red">VARCHAR</span>(<span class="blue">50</span>)	<span class="red">CONSTRAINT</span> uk_Cliente_email <span class="red">UNIQUE</span>,
+    CONSTRAINT ck_Cliente_email CHECK (email <span class="red">LIKE</span> <span class="blue">'%@%.%'</span> ),
+
+    tipo                <span class="red">CHAR</span>(<span class="blue">1</span>),
+    <span class="red">CONSTRAINT</span> ck_Cliente_tipo <span class="red">CHECK</span> (tipo <span class="red">IN</span> ('E', 'P')), <span class="gray">/*Empresa / Particular*/</span>
+
+    plafond             <span class="red">NUMBER</span>(<span class="blue">8</span>, <span class="blue">2</span>),
+    <span class="red">CONSTRAINT</span> ck_Cliente_plafond <span class="red">CHECK</span> (plafond >= <span class="blue">0</span>),
+
+    nivelNegocio        <span class="red">CHAR</span>(<span class="blue">1</span>),
+    <span class="red">CONSTRAINT</span> ck_Cliente_nivelNegocio <span class="red">CHECK</span> (nivelNegocio <span class="red">IN</span> (<span class="blue">'A'</span>, <span class="blue">'B'</span>, <span class="blue">'C'</span>)),
+
+    nome                <span class="red">VARCHAR</span>(<span class="blue">50</span>)
+    nif                 <span class="red">NUMBER</span>(<span class="blue">9</span>)
+    <span class="red">CONSTRAINT</span> ck_Cliente_nif <span class="red">CHECK</span> (nif > <span class="blue">100000000</span>)
+    idHub               <span class="red">VARCHAR</span>(<span class="blue">5</span>)
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">ClienteExploracaoAgricola</span> (
+    idExploracaoAgricola    <span class="red">INTEGER</span>,
+    codigoInternoCliente    <span class="red">INTEGER</span>,
+    <span class="red">CONSTRAINT</span> pk_ClienteExploracaoAgricola_idExploracaoAgricola_codigoInternoCliente <span class="red">PRIMARY KEY</span> (idExploracaoAgricola, codigoInternoCliente)
+);
+
+
+<span class="red">CREATE TABLE</span> <span class="purple">CodigoPostal</span> (
+  codigoPostal    <span class="red">CHAR</span>(<span class="blue">8</span>),
+  localidade      <span class="red">VARCHAR</span>(<span class="blue">100</span>),
+  <span class="red">CONSTRAINT</span> ck_CodigoPostal_codigoPostal <span class="red">CHECK</span> (codigoPostal <span class="red">LIKE</span> <span class="blue">'____-___'</span> ),
+  <span class="red">CONSTRAINT</span> pk_CodigoPostal_codigoPostal <span class="red">PRIMARY KEY</span> (codigoPostal)
+);
+
+
+<span class="red">CREATE TABLE</span> <span class="purple">Morada</span> (
+    codigoPostal            <span class="red">CHAR</span>(<span class="blue">8</span>),
+    <span class="red">CONSTRAINT</span> ck_Morada_codigoPostal <span class="red">CHECK</span> (codigoPostal <span class="red">LIKE</span> <span class="blue">'____-___'</span> ),
+
+    numeroPorta             <span class="red">INTEGER</span>,
+    <span class="red">CONSTRAINT</span> ck_Morada_numeroPorta <span class="red">CHECK</span> (numeroPorta >= <span class="blue">0</span>),
+    codigoInternoCliente    <span class="red">INTEGER</span>,
+    tipoMorada              <span class="red">CHAR</span>(<span class="blue">1</span>),
+    <span class="red">CONSTRAINT</span> ck_Morada_tipoMorada <span class="red">CHECK</span> (tipoMorada <span class="red">IN</span> (<span class="blue">'C'</span>, <span class="blue">'E'</span>)), <span class="gray">/*Correspondencia / Entrega*/</span>
+
+    <span class="red">CONSTRAINT</span> pk_Morada_codigoPostal_numeroPorta <span class="red">PRIMARY KEY</span> (codigoPostal, numeroPorta)
+);
+
+
+<span class="red">CREATE TABLE</span> <span class="purple">Encomenda</span> (
+    numeroEncomenda         <span class="red">INTEGER</span>     <span class="red">GENERATED ALWAYS AS IDENTITY CONSTRAINT</span> pk_Encomenda_numeroEncomenda <span class="red">PRIMARY KEY</span>,
+    codigoInternoCliente    <span class="red">INTEGER</span>,
+    codigoPostalMorada      <span class="red">CHAR</span>(<span class="blue">8</span>),
+    numeroPortaMorada       <span class="red">INTEGER</span>,
+    dataEncomenda           <span class="red">DATE DEFAULT</span> <span class="yellow">SYSDATE</span>,
+    <span class="red">CONSTRAINT</span> nn_Encomenda_dataEncomenda <span class="red">NOT NULL</span>,
+
+    estado                  <span class="red">CHAR</span>(<span class="blue">1</span>),
+    <span class="red">CONSTRAINT</span> ck_Encomenda_estado <span class="red">CHECK</span> (estado <span class="red">IN</span> (<span class="blue">'R'</span>, <span class="blue">'E'</span>, <span class="blue">'P'</span>)), <span class="gray">/* Registada / Encomendada / Paga */</span>
+
+    dataEntrega             <span class="red">DATE</span>,
+    <span class="red">CONSTRAINT</span> ck_Encomenda_dataEntrega <span class="red">CHECK</span> (dataEntrega >= dataEncomenda),
+
+    dataPagamento           <span class="red">DATE</span>,
+    <span class="red">CONSTRAINT</span> ck_Encomenda_dataPagamento <span class="red">CHECK</span> (dataPagamento >= dataEncomenda),
+
+    valorTotal              <span class="red">NUMBER</span>(<span class="blue">8</span>, <span class="blue">2</span>),
+    <span class="red">CONSTRAINT</span> ck_Encomenda_valorTotal <span class="red">CHECK</span> (valorTotal >= <span class="blue">0</span>),
+
+    idHub               <span class="red">VARCHAR</span>(<span class="blue">5</span>)
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">Incidente</span> (
+    idIncidente             <span class="red">INTEGER</span> <span class="red">GENERATED ALWAYS AS IDENTITY CONSTRAINT</span> pk_Incidente_idIncidente <span class="red">PRIMARY KEY</span>,
+    codigoInternoCliente    <span class="red">INTEGER</span>,
+    numeroEncomenda         <span class="red">INTEGER</span>,
+    valorDivida             <span class="red">NUMBER</span>(<span class="blue">8</span>, <span class="blue">2</span>)
+    <span class="red">CONSTRAINT</span> ck_Incidente_valorDivida <span class="red">CHECK</span> (valorDivida >= <span class="blue">0</span>),
+    dataSanado              <span class="red">DATE</span>,
+    <span class="red">CONSTRAINT</span> ck_Incidente_dataSanado <span class="red">CHECK</span> (dataSanado >= dataOcorrencia),
+    dataOcorrencia          <span class="red">DATE</span> <span class="red">CONSTRAINT</span> nn_Incidente_dataOcorrencia <span class="red">NOT NULL</span>
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">EstacaoMeteorologica</span> (
+    idEstacaoMeteorologica      <span class="red">INTEGER</span>     <span class="red">GENERATED ALWAYS AS IDENTITY CONSTRAINT</span> pk_EstacaoMeteorologica_idEstacaoMeteorologica <span class="red">PRIMARY KEY</span>,
+    idExploracaoAgricola        <span class="red">INTEGER</span>
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">TipoSensor</span> (
+    tipo        <span class="red">CHAR</span>(<span class="blue">2</span>)     <span class="red">CONSTRAINT</span> pk_TipoSensor_tipo <span class="red">PRIMARY KEY</span>,
+    <span class="red">CONSTRAINT</span> ck_TipoSensor_tipo <span class="red">CHECK</span> (tipo <span class="red">IN</span> (<span class="blue">'HS'</span>, <span class="blue">'Pl'</span>, <span class="blue">'TS'</span>, <span class="blue">'VV'</span>, <span class="blue">'TA'</span>, <span class="blue">'HA'</span>, <span class="blue">'PA'</span>)), <span class="gray">/* Humidade Solo / Pluviosidade / Temperatura solo / Velocidade Vento / temperatura Atmosférica / Humidade Ar / Pressão Atmosférica */</span>
+
+    unidade     <span class="red">VARCHAR</span>(<span class="blue">5</span>)  <span class="gray">/*Exemplo: km/h*/</span>
+);
+
+
+<span class="red">CREATE TABLE</span> <span class="purple">Sensor</span> (
+    identificador               <span class="red">INTEGER</span>     <span class="red">GENERATED ALWAYS AS IDENTITY CONSTRAINT</span> pk_Sensor_identificador <span class="red">PRIMARY KEY</span>,
+    idEstacaoMeteorologica      <span class="red">INTEGER</span>,
+    tipoTipoSensor              <span class="red">CHAR</span>(<span class="blue">2</span>),
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">SensorLeituras</span> (
+    identificadorSensor         <span class="red">INTEGER</span>,
+    tipoTipoSensor              <span class="red">CHAR</span>(<span class="blue">2</span>),
+    valorLido                   <span class="red">INTEGER</span>,
+    <span class="red">CONSTRAINT</span> ck_Sensor_valorLido <span class="red">CHECK</span> (valorLido >= <span class="blue">0</span> <span class="red">AND</span> valorLido <= <span class="blue">100</span>),
+
+    referencia                  <span class="red">INTEGER</span>      <span class="red">CONSTRAINT</span> pk_SensorLeituras_referencia <span class="red">PRIMARY KEY</span>
+
+    instanteLeitura             <span class="red">VARCHAR</span>(<span class="blue">5</span>)   <span class="red">CONSTRAINT</span> nn_Sensor_instanteLeitura <span class="red">NOT NULL</span>
+
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">Setor</span> (
+    designacao              <span class="red">VARCHAR</span>(<span class="blue">40</span>),
+    idExploracaoAgricola    <span class="red">INTEGER</span>,
+    areaTotal               <span class="red">NUMBER</span>(<span class="blue">8</span>, <span class="blue">2</span>),
+    <span class="red">CONSTRAINT</span> ck_Setor_areaTotal <span class="red">CHECK</span> (areaTotal >= <span class="blue">0</span>),
+
+    <span class="red">CONSTRAINT</span> pk_Setor_designacao_idExploracaoAgricola <span class="red">PRIMARY KEY</span> (designacao, idExploracaoAgricola)
+);
+
+
+<span class="red">CREATE TABLE</span> <span class="purple">Auditoria</span> (
+    idRegistoAuditoria          <span class="red">INTEGER</span>     <span class="red">GENERATED ALWAYS AS IDENTITY CONSTRAINT</span> pk_RegistoAuditoria_idRegistoAuditoria <span class="red">PRIMARY KEY</span>,
+    idGestorAgricola            <span class="red">INTEGER</span>,
+    designacaoSetor             <span class="red">VARCHAR</span>(<span class="blue">40</span>),
+    idExploracaoAgricola        <span class="red">INTEGER</span>,
+    dataHora                    <span class="red">DATE</span>	    <span class="red">CONSTRAINT</span> nn_Auditoria_dataHora <span class="red">NOT NULL</span>,
+    username                    <span class="red">VARCHAR</span>(<span class="blue">20</span>) <span class="red">CONSTRAINT</span> nn_Auditoria_username <span class="red">NOT NULL</span>,
+    operacaoEscrita             <span class="red">CHAR</span>(<span class="blue">6</span>),
+    <span class="red">CONSTRAINT</span> ck_RegistoAuditoria_operacaoEscrita <span class="red">CHECK</span> (operacaoEscrita <span class="red">IN</span> (<span class="blue">'I'</span>, <span class="blue">'U'</span>, <span class="blue">'D'</span>)) <span class="gray">/* INSERT / UPDATE / DELETE */</span>
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">OperacaoAgricola</span> (
+    idOperacaoAgricola          	<span class="red">INTEGER</span>         <span class="red">GENERATED ALWAYS AS IDENTITY CONSTRAINT</span> pk_OperacaoAgricola_idOperacaoAgricola <span class="red">PRIMARY KEY</span>,
+    designacaoSetor             	<span class="red">VARCHAR</span>(<span class="blue">10</span>),
+    idExploracaoAgricola        	<span class="red">INTEGER</span>,
+
+    dataAgendada                	<span class="red">DATE</span>		<span class="red">CONSTRAINT</span> nn_OperacaoAgricola_dataAgendada <span class="red">NOT NULL</span>,
+    dataRealizacao              	<span class="red">DATE</span>,
+    <span class="red">CONSTRAINT</span> ck_OperacaoAgricola_dataRealizacao <span class="red">CHECK</span> (dataRealizacao >= dataAgendada),
+
+    tipo                        	<span class="red">VARCHAR</span>(<span class="blue">40</span>)	<span class="red">CONSTRAINT</span> nn_OperacaoAgricola_tipo <span class="red">NOT NULL</span>,
+    estadoOperacao              	<span class="red">CHAR</span>(<span class="blue">1</span>),
+    <span class="red">CONSTRAINT</span> ck_OperacaoAgricola_estadoOperacao <span class="red">CHECK</span> (estadoOperacao <span class="red">IN</span> (<span class="blue">'A'</span>, <span class="blue">'C'</span>, <span class="blue">'R'</span>)) <span class="gray">/* Atualizada / Cancelada / Realizada */</span>
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">FatorProducao</span> (
+    nomeComercial           <span class="red">VARCHAR</span>(<span class="blue">30</span>),
+    tipo                    <span class="red">CHAR</span>(<span class="blue">2</span>),
+    <span class="red">CONSTRAINT</span> ck_FatorProducao_tipo <span class="red">CHECK</span> (tipo <span class="red">IN</span> (<span class="blue">'CM'</span>, <span class="blue">'FE'</span>, <span class="blue">'PF'</span>)), <span class="gray">/* Corretivo Mineral / Fertilizante / Produto fitofármaco */</span>
+
+    fornecedor              <span class="red">VARCHAR</span>(<span class="blue">30</span>)   <span class="red">CONSTRAINT</span> nn_FatorProducaoConstituinte_fornecedor <span class="red">NOT NULL</span>
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">FatoresAplicados</span> (
+    idOperacaoAgricola		        <span class="red">INTEGER</span>,
+    nomeComercialFatorProducao	        <span class="red">VARCHAR</span>(<span class="blue">30</span>),
+    quantidadeAplicada		        <span class="red">NUMBER</span>(<span class="blue">5</span>, <span class="blue">2</span>),
+    <span class="red">CONSTRAINT</span> ck_FatoresAplicados_quantidadeAplicada <span class="red">CHECK</span> (quantidadeAplicada >= <span class="blue">0</span>),
+
+    formaAplicacao                      <span class="red">VARCHAR</span>(<span class="blue">10</span>),
+    <span class="red">CONSTRAINT</span> ck_OperacaoAgricola_formaAplicacao <span class="red">CHECK</span> (formaAplicacao <span class="red">IN</span> (<span class="blue">'Foliar'</span>, <span class="blue">'Fertirrega</span>, <span class="blue">'Solo'</span>)),
+
+    <span class="red">CONSTRAINT</span> pk_FatoresAplicados_idOperacaoAgricola_nomeComercialFatorProducao <span class="red">PRIMARY KEY</span> (idOperacaoAgricola, nomeComercialFatorProducao)
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">Restricao</span> (
+    idRestricao                     <span class="red">INTEGER</span>         <span class="red">GENERATED ALWAYS AS IDENTITY CONSTRAINT</span> pk_Restricao_idRestricao <span class="red">PRIMARY KEY</span>,
+    nomeComercialFatorProducao      <span class="red">VARCHAR</span>(<span class="blue">30</span>),
+    dataInicial                     <span class="red">DATE</span>            <span class="red">CONSTRAINT</span> nn_Restricao_dataInicial <span class="red">NOT NULL</span>,
+    dataFinal                       <span class="red">DATE</span>,
+    <span class="red">CONSTRAINT</span> ck_Restricao_dataFinal <span class="red">CHECK</span> (dataFinal >= dataInicial)
+);
+
+
+<span class="red">CREATE TABLE</span> <span class="purple">RestricaoSetor</span> (
+    idRestricao          <span class="red">INTEGER</span>,
+    designacaoSetor      <span class="red">VARCHAR</span>(<span class="blue">40</span>),
+    idExploracaoAgricola <span class="red">INTEGER</span>,
+
+    <span class="red">CONSTRAINT</span> pk_RestricaoSetor_idRestricao_designacaoSetor_idExploracaoAgricola <span class="red">PRIMARY KEY</span> (idRestricao, designacaoSetor, idExploracaoAgricola)
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">Constituinte</span> (
+    nome                <span class="red">VARCHAR</span>(<span class="blue">30</span>),
+    quantidade          <span class="red">NUMBER</span>(<span class="blue">5</span>, <span class="blue">2</span>),
+    <span class="red">CONSTRAINT</span> ck_Constituinte_quantidade <span class="red">CHECK</span> (quantidade >= <span class="blue">0</span>),
+
+    unidade             <span class="red">CHAR</span>(<span class="blue">5</span>),
+    categoria           <span class="red">CHAR</span>(<span class="blue">1</span>),
+    <span class="red">CONSTRAINT</span> ck_Constituinte_categoria <span class="red">CHECK</span> (categoria <span class="red">IN</span> (<span class="blue">'E'</span>, <span class="blue">'S'</span>)), <span class="gray">/* Elemento / Substância */</span>
+
+    <span class="red">CONSTRAINT</span> pk_Constituinte_nome <span class="red">PRIMARY KEY</span> (nome)
+);
+
+
+<span class="red">CREATE TABLE</span> <span class="purple">FatorProducaoConstituinte</span> (
+    nomeComercialFatorProducao      <span class="red">VARCHAR</span>(<span class="blue">30</span>),
+    nomeConstituinte                <span class="red">VARCHAR</span>(<span class="blue">30</span>)
+
+    <span class="red">CONSTRAINT</span> pk_FatorProducaoConstituinte_nomeComercialFatorProducao_nomeConstituinte <span class="red">PRIMARY KEY</span> (nomeComercialFatorProducao, nomeConstituinte)
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">Cultura</span> (
+    idCultura               <span class="red">INTEGER</span>      <span class="red">GENERATED ALWAYS AS IDENTITY CONSTRAINT</span> pk_Cultura_idCultura <span class="red">PRIMARY KEY</span>,
+    designacaoSetor         <span class="red">VARCHAR</span>(<span class="blue">40</span>),
+    idExploracaoAgricola    <span class="red">INTEGER</span>,
+    areaCultura             <span class="red">NUMBER</span>(<span class="blue">8</span>, <span class="blue">2</span>),
+    <span class="red">CONSTRAINT</span> ck_Cultura_areaCultura <span class="red">CHECK</span> (areaCultura >= <span class="blue">0</span>),
+    tipo                    <span class="red">CHAR</span>(<span class="blue">1</span>),
+    <span class="red">CONSTRAINT</span> ck_Cultura_tipo <span class="red">CHECK</span> (tipo <span class="red">IN</span> (<span class="blue">'P'</span>, <span class="blue">'T'</span>)), <span class="gray">/* Permanente / temporário */</span>
+
+    cultivo                 <span class="red">VARCHAR</span>(<span class="blue">40</span>)
+);
+
+
+<span class="red">CREATE TABLE</span> <span class="purple">Produto</span> (
+    idProduto               <span class="red">INTEGER</span>      <span class="red">GENERATED ALWAYS AS IDENTITY CONSTRAINT</span> pk_Produto_idProduto <span class="red">PRIMARY KEY</span>,
+    nome                    <span class="red">VARCHAR</span>(<span class="blue">40</span>)
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">CulturaProduto</span> (
+    idCultura               <span class="red">INTEGER</span>,
+    idProduto               <span class="red">INTEGER</span>,
+    <span class="red">CONSTRAINT</span> pk_CulturaProduto_idCultura_idProduto <span class="red">PRIMARY KEY</span> (idCultura, idProduto)
+);
+
+
+<span class="red">CREATE TABLE</span> <span class="purple">Safra</span> (
+    idSafra             <span class="red">INTEGER</span>     <span class="red">GENERATED ALWAYS AS IDENTITY CONSTRAINT</span> pk_Safra_idSafra <span class="red">PRIMARY KEY</span>,
+    idCultura           <span class="red">INTEGER</span>,
+    quantidadeProducao  <span class="red">INTEGER</span>,
+    <span class="red">CONSTRAINT</span> ck_Safra_quantidadeProducao <span class="red">CHECK</span> (quantidadeProducao >= <span class="blue">0</span>),
+
+    lucro               <span class="red">NUMBER</span>(<span class="blue">8</span>, <span class="blue">2</span>),
+
+    <span class="red">CONSTRAINT</span> fk_Safra_idCultura_Cultura <span class="red">FOREIGN KEY</span> (idCultura) <span class="red">REFERENCES</span> <span class="purple">Cultura</span> (idCultura)
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">Caracteristica</span> (
+    idCaracteristica    <span class="red">INTEGER</span>    <span class="red">GENERATED ALWAYS AS IDENTITY</span>,
+    idCultura           <span class="red">INTEGER</span>,
+    nome                <span class="red">VARCHAR</span>(<span class="blue">20</span>),
+
+    <span class="red">CONSTRAINT</span> pk_Caracteristica_idCaracteristica_idCultura <span class="red">PRIMARY KEY</span> (idCaracteristica, idCultura)
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">Parametro</span> (
+    idParametro         <span class="red">INTEGER</span>    <span class="red">GENERATED ALWAYS AS IDENTITY</span>,
+    idCaracteristica    <span class="red">INTEGER</span>,
+    idCultura           <span class="red">INTEGER</span>,
+    nome                <span class="red">VARCHAR</span>(<span class="blue">20</span>),
+
+    <span class="red">CONSTRAINT</span> pk_Parametro_idParamentro_idCaracteristica_idCultura <span class="red">PRIMARY KEY</span> (idParametro, idCaracteristica, idCultura)
+);
+
+
+<span class="red">CREATE TABLE</span> <span class="purple">Input_Sensor</span>(
+    input_string        <span class="red">VARCHAR</span>(<span class="blue">25</span>)
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">Input_Hub</span>(
+    input_string       <span class="red">VARCHAR</span>(<span class="blue">25</span>)
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">Hub</span>(
+    idHub               <span class="red">VARCHAR</span>(<span class="blue">5</span>)   CONSTRAINT pk_Hub_idHub PRIMARY KEY,
+    latitude            <span class="red">NUMBER</span>(<span class="blue">6</span>, <span class="blue">4</span>),
+    longitude           <span class="red">NUMBER</span>(<span class="blue">6</span>, <span class="blue">4</span>),
+    idParticipante      <span class="red">VARCHAR</span>(<span class="blue">5</span>)
+);
+
+<span class="red">CREATE TABLE</span> <span class="purple">LogLeiturasInput</span>(
+    idLog               <span class="red">INTEGER GENERATED ALWAYS AS IDENTITY CONSTRAINT</span> pk_LogLeiturasInput_idLog <span class="red">PRIMARY KEY</span>,
+    dataLeitura         <span class="red">TIMESTAMP</span>,
+    registosLidos       <span class="red">NUMBER</span>,
+    registosInseridos   <span class="red">NUMBER</span>,
+    registosComErro     <span class="red">NUMBER</span>
+);
+
+
+<span class="red">ALTER TABLE</span> <span class="purple">ExploracaoAgricola</span> ADD CONSTRAINT fk_ExploracaoAgricola_idGestorAgricola_GestorAgricola FOREIGN KEY (idGestorAgricola) REFERENCES GestorAgricola (idGestorAgricola);
+
+<span class="red">ALTER TABLE</span> <span class="purple">Cliente</span> <span class="red">ADD CONSTRAINT</span> fk_Cliente_idHub_Hub FOREIGN KEY (idHub) REFERENCES Hub (idHub);
+
+<span class="red">ALTER TABLE</span> <span class="purple">ClienteExploracaoAgricola</span> <span class="red">ADD CONSTRAINT</span> fk_ClienteExploracaoAgricola_idExploracaoAgricola_ExploracaoAgricola <span class="red">FOREIGN KEY</span> (idExploracaoAgricola) <span class="red">REFERENCES</span> <span class="purple">ExploracaoAgricola</span> (idExploracaoAgricola);
+<span class="red">ALTER TABLE</span> <span class="purple">ClienteExploracaoAgricola</span> <span class="red">ADD CONSTRAINT</span> fk_ClienteExploracaoAgricola_codigoInternoCliente_Cliente <span class="red">FOREIGN KEY</span> (codigoInternoCliente) <span class="red">REFERENCES</span> <span class="purple">Cliente</span> (codigoInterno);
+
+<span class="red">ALTER TABLE</span> <span class="purple">Morada</span> <span class="red">ADD CONSTRAINT</span> fk_Morada_codigoPostal_CodigoPostal <span class="red">FOREIGN KEY</span> (codigoPostal) <span class="red">REFERENCES</span> <span class="purple">CodigoPostal</span> (codigoPostal);
+<span class="red">ALTER TABLE</span> <span class="purple">Morada</span> <span class="red">ADD CONSTRAINT</span> fk_Morada_codigoInternoCliente_Cliente <span class="red">FOREIGN KEY</span> (codigoInternoCliente) <span class="red">REFERENCES</span> <span class="purple">Cliente</span> (codigoInterno);
+
+<span class="red">ALTER TABLE</span> <span class="purple">Encomenda</span> <span class="red">ADD CONSTRAINT</span> fk_Encomenda_codigoInternoCliente_Cliente <span class="red">FOREIGN KEY</span> (codigoInternoCliente) <span class="red">REFERENCES</span> <span class="purple">Cliente</span> (codigoInterno);
+<span class="red">ALTER TABLE</span> <span class="purple">Encomenda</span> <span class="red">ADD CONSTRAINT</span> fk_Encomenda_codigoPostalMorada_numeroPortaMorada_Morada <span class="red">FOREIGN KEY</span> (codigoPostalMorada, numeroPortaMorada) <span class="red">REFERENCES</span> <span class="purple">Morada</span> (codigoPostal, numeroPorta);
+<span class="red">ALTER TABLE</span> <span class="purple">Encomenda</span> <span class="red">ADD CONSTRAINT</span> fk_Encomenda_idHub_Hub <span class="red">FOREIGN KEY</span> (idHub) <span class="red">REFERENCES</span> <span class="purple">Hub</span> (idHub);
+
+<span class="red">ALTER TABLE</span> <span class="purple">Incidente</span> <span class="red">ADD CONSTRAINT</span> fk_Incidente_numeroEncomenda_Encomenda <span class="red">FOREIGN KEY</span> (numeroEncomenda) <span class="red">REFERENCES</span> <span class="purple">Encomenda</span> (numeroEncomenda);
+<span class="red">ALTER TABLE</span> <span class="purple">Incidente</span> <span class="red">ADD CONSTRAINT</span> fk_Incidente_codigoInternoCliente_Cliente <span class="red">FOREIGN KEY</span> (codigoInternoCliente) <span class="red">REFERENCES</span> <span class="purple">Cliente</span> (codigoInterno);
+
+<span class="red">ALTER TABLE</span> <span class="purple">EstacaoMeteorologica</span> <span class="red">ADD CONSTRAINT</span> fk_EstacaoMeteorologica_idExploracaoAgricola_ExploracaoAgricola <span class="red">FOREIGN KEY</span> (idExploracaoAgricola) <span class="red">REFERENCES</span> <span class="purple">ExploracaoAgricola</span> (idExploracaoAgricola);
+
+<span class="red">ALTER TABLE</span> <span class="purple">Sensor</span> <span class="red">ADD CONSTRAINT</span> fk_Sensor_idEstacaoMeteorologica_EstacaoMeteorologica <span class="red">FOREIGN KEY</span> (idEstacaoMeteorologica) <span class="red">REFERENCES</span> <span class="purple">EstacaoMeteorologica</span> (idEstacaoMeteorologica);
+<span class="red">ALTER TABLE</span> <span class="purple">Sensor</span> <span class="red">ADD CONSTRAINT</span> fk_Sensor_tipoTipoSensor_TipoSensor <span class="red">FOREIGN KEY</span> (tipoTipoSensor) <span class="red">REFERENCES</span> <span class="purple">TipoSensor</span> (tipo);
+
+<span class="red">ALTER TABLE</span> <span class="purple">SensorLeituras</span> <span class="red">ADD CONSTRAINT</span> fk_SensorLeituras_identificador_Sensor <span class="red">FOREIGN KEY</span> (identificadorSensor) <span class="red">REFERENCES</span>  <span class="purple">Sensor</span> (identificador);
+<span class="red">ALTER TABLE</span> <span class="purple">SensorLeituras</span> <span class="red">ADD CONSTRAINT</span> fk_SensorLeituras_tipoTipoSensor_Sensor <span class="red">FOREIGN KEY</span> (tipoTipoSensor) <span class="red">REFERENCES</span>  <span class="purple">TipoSensor</span> (tipo);
+
+<span class="red">ALTER TABLE</span> <span class="purple">Setor</span> <span class="red">ADD CONSTRAINT</span> fk_Setor_ExploracaoAgricola_idExploracaoAgricola <span class="red">FOREIGN KEY</span> (idExploracaoAgricola) <span class="red">REFERENCES</span> <span class="purple">ExploracaoAgricola</span> (idExploracaoAgricola);
+
+<span class="red">ALTER TABLE</span> <span class="purple">Auditoria</span> <span class="red">ADD CONSTRAINT</span> fk_Auditoria_idGestorAgricola_GestorAgricola <span class="red">FOREIGN KEY</span> (idGestorAgricola) <span class="red">REFERENCES</span> <span class="purple">GestorAgricola</span> (idGestorAgricola);
+<span class="red">ALTER TABLE</span> <span class="purple">Auditoria</span> <span class="red">ADD CONSTRAINT</span> fk_Auditoria_designacaoSetor_idExploracaoAgricola_Setor <span class="red">FOREIGN KEY</span> (designacaoSetor, idExploracaoAgricola) <span class="red">REFERENCES</span> <span class="purple">Setor</span> (designacao, idExploracaoAgricola);
+
+<span class="red">ALTER TABLE</span> <span class="purple">OperacaoAgricola</span> <span class="red">ADD CONSTRAINT</span> fk_OperacaoAgricola_designacaoSetor_idExploracaoAgricola_Setor <span class="red">FOREIGN KEY</span> (designacaoSetor, idExploracaoAgricola) <span class="red">REFERENCES</span> <span class="purple">Setor</span> (designacao, idExploracaoAgricola);
+
+<span class="red">ALTER TABLE</span> <span class="purple">FatoresAplicados</span> <span class="red">ADD CONSTRAINT</span> fk_FatoresAplicados_idOperacaoAgricola_OperacaoAgricola <span class="red">FOREIGN KEY</span> (idOperacaoAgricola) <span class="red">REFERENCES</span> <span class="purple">OperacaoAgricola</span> (idOperacaoAgricola);
+<span class="red">ALTER TABLE</span> <span class="purple">FatoresAplicados</span> <span class="red">ADD CONSTRAINT</span> fk_FatoresAplicados_nomeComercialFatorProducao_FatorProducao <span class="red">FOREIGN KEY</span> (nomeComercialFatorProducao) <span class="red">REFERENCES</span> <span class="purple">FatorProducao</span> (nomeComercial);
+
+<span class="red">ALTER TABLE</span> <span class="purple">Restricao</span> <span class="red">ADD CONSTRAINT</span> fk_Restricao_nomeComercialFatorProducao_FatorProducao <span class="red">FOREIGN KEY</span> (nomeComercialFatorProducao) <span class="red">REFERENCES</span> <span class="purple">FatorProducao</span> (nomeComercial);
+
+<span class="red">ALTER TABLE</span> <span class="purple">RestricaoSetor</span> <span class="red">ADD CONSTRAINT</span> fk_RestricaoSetor_idRestricao_Restricao <span class="red">FOREIGN KEY</span> (idRestricao) <span class="red">REFERENCES</span> <span class="purple">Restricao</span> (idRestricao);
+<span class="red">ALTER TABLE</span> <span class="purple">RestricaoSetor</span> <span class="red">ADD CONSTRAINT</span> fk_RestricaoSetor_designacaoSetor_idExploracaoAgricola <span class="red">FOREIGN KEY</span> (designacaoSetor, idExploracaoAgricola) <span class="red">REFERENCES</span> <span class="purple">Setor</span> (designacao, idExploracaoAgricola);
+
+<span class="red">ALTER TABLE</span> <span class="purple">FatorProducaoConstituinte</span> <span class="red">ADD CONSTRAINT</span> fk_FatorProducaoConstituinte_nomeComercialFatorProducao_FatorProducao <span class="red">FOREIGN KEY</span> (nomeComercialFatorProducao) <span class="red">REFERENCES</span> <span class="purple">FatorProducao</span> (nomeComercial);
+<span class="red">ALTER TABLE</span> <span class="purple">FatorProducaoConstituinte</span> <span class="red">ADD CONSTRAINT</span> fk_FatorProducaoConstituinte_nomeConstituinte_Constituinte <span class="red">FOREIGN KEY</span> (nomeConstituinte) <span class="red">REFERENCES</span> <span class="purple">Constituinte</span> (nome);
+
+<span class="red">ALTER TABLE</span> <span class="purple">Cultura</span> <span class="red">ADD CONSTRAINT</span> fk_Cultura_designacaoSetor_idExploracaoAgricola <span class="red">FOREIGN KEY</span> (designacaoSetor, idExploracaoAgricola) <span class="red">REFERENCES</span> <span class="purple">Setor</span> (designacao, idExploracaoAgricola);
+
+<span class="red">ALTER TABLE</span> <span class="purple">CulturaProduto</span> <span class="red">ADD CONSTRAINT</span> fk_CulturaProduto_idCultura_Cultura <span class="red">FOREIGN KEY</span> (idCultura) <span class="red">REFERENCES</span> <span class="purple">Cultura</span> (idCultura);
+<span class="red">ALTER TABLE</span> <span class="purple">CulturaProduto</span> <span class="red">ADD CONSTRAINT</span> fk_CulturaProduto_idProduto_Produto <span class="red">FOREIGN KEY</span> (idProduto) <span class="red">REFERENCES</span> <span class="purple">Produto</span> (idProduto);
+
+<span class="red">ALTER TABLE</span> <span class="purple">Safra</span> <span class="red">ADD CONSTRAINT</span> fk_Safra_idCultura_Cultura <span class="red">FOREIGN KEY</span> (idCultura) <span class="red">REFERENCES</span> <span class="purple">Cultura</span> (idCultura);
+
+<span class="red">ALTER TABLE</span> <span class="purple">Caracteristica</span> <span class="red">ADD CONSTRAINT</span> fk_Caracteristica_idCultura_Cultura <span class="red">FOREIGN KEY</span> (idCultura) <span class="red">REFERENCES</span> <span class="purple">Cultura</span> (idCultura);
+
+<span class="red">ALTER TABLE</span> <span class="purple">Parametro</span> <span class="red">ADD CONSTRAINT</span> fk_Parametro_idCaracteristica_Caracteristica <span class="red">FOREIGN KEY</span> (idCaracteristica, idCultura) <span class="red">REFERENCES</span> <span class="purple">Caracteristica</span> (idCaracteristica, idCultura);
+
+            </code>
+        </pre>
+    </div>
+
+</main>
+</body>
+</html>

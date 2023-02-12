@@ -1,0 +1,376 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+package Controllers {
+class CalculateStatisticsController{
+    +void calculateStatistics(dispatchList)
+    +void calculateStatistics(index)
+}
+class ConnectionNetworkController{
+    +boolean fillWithVertex(mst , participantConnectionmap, participantParentMap)
+    +void fillListWithKruskalObject(kruskalObjectList)
+    +void runKruskalAlgorithm()
+}
+class DefineHubsController{
+    +boolean isNumberOfHubsValid(numberOfHubs)
+    +int getNumOfCompanies()
+    +List<String> getHubs(numberOfHubs)
+}
+class ExpeditionListMinimizedPathController{
+    +boolean isDispatchListRequiredValid(day, restrictDispatchList)
+    +List<String> getProducersFromExpeditionList()
+    +void setProducersList(day, restrictDispatchList)
+    +Map<String, Integer> getBasketsDroppedPerHub()
+    +Map<List<List<DijkstraObjectDTO<Participant, Double>>>, List<Double>> returnMinimizedPath(startingPointId)
+}
+class FindNearestHubController{
+    +boolean hubExists()
+    -List<Client> getListOfClients()
+    +Map<String, String> getNearestHub()
+}
+class GenerateDispatchListController{
+    +List<BasketOrder> generateSimpleDispatchList(day)
+    +List<BasketOrder> generateDispatchListWithRestrictions(day, n)
+    +List<BasketOrder> getDispatchListWithRestrictionsOfDayIfAlreadyExists(day)
+    +boolean areThereOrdersForDay(day)
+    +boolean areThereNProducersInTheNetwork(n)
+    -void simulateSimpleGenerationBeforeDay(day)
+    -void simulateDispatchListWithRestrictionsBeforeDay(day, n)
+    -List<BasketOrder> getSimpleDispatchListOfADayIfAlreadyGenerated(day)
+}
+class LoadDataFromFilesController{
+    +boolean loadParticipants(path)
+    +boolean loadRoutes(path)
+    +boolean loadProducts(path)
+    +boolean loadWateringPlan(path)
+}
+class MostDistantPairOfVerticesController{
+    +boolean isConnected()
+    +DijkstraObjectDTO<Participant, Double> getLongestPath()
+    -void dijkstraSetUp(vOrig)
+}
+class WateringController{
+    +Map<String, Integer> watering()
+}
+}
+
+package Domain {
+    package Graph {
+        package map{
+        class MapGraph{
+        +boolean validVertex(vert)
+        +Collection<V> adjVertices(vert)
+        +Collection<Edge<V,E>> edges()
+        +Edge<V,E> edge(vOrig, vDest)
+        +Edge<V,E> edge(vOrigKey, vDestKey)
+        +int outDegree(vert)
+        +int inDegree(vert)
+        +Collection<Edge<V,E>> outgoingEdges(vert)
+        +Collection<Edge<V,E>> incomingEdges(vert)
+        +boolean addVertex(vert)
+        +boolean addEdge(vOrig, vDest, weight)
+        +boolean removeVertex(vert)
+        +boolean removeEdge(vOrig, vDest)
+        +Graph<V,E> clone()
+        +boolean isConnected()
+        +boolean isEmpty()
+        }
+        class MapVertex{
+        +void addAdjVert(vAdj, edge)
+        +void remAdjVert(vAdj)
+        +Edge<V,E> getedge(vAdj)
+        +int numAdjVerts()
+        +Collection<V> getAllAdjVerts()
+        +Collection<Edge<V,E>> getAllOutEdges()
+        }
+        }
+        class Algorithms{
+            +LinkedList<V> BreadthFirstSearch(graph, vert)
+            -void DepthFirstSearch(graph, vertOrigin, visited, qSearch)
+            +LinkedList<V> DepthFirstSearch(graph,vert)
+            -void allPaths(graph,vOrig, vDest, visited, path, paths)
+            -void shortestPathDijkstra(graph, vOrig, ce, sum, zero, visited, pathKeys, dist)
+            -void initializePathDist(nVerts, pathKeys, dist)
+            -void getPath(g, vOrig, vDest)
+        }
+        abstract class CommonGraph{
+            +boolean isEmpty()
+            +boolean isDirected()
+            +int numVertices()
+            +ArrayList<V> vertices()
+            +boolean validVertex(vert)
+            +int key(vert)
+            +V vertex(key)
+            +V vertex(p)
+            +int numEdges()
+            +Graph<V,E> clone()
+        }
+        class DijkstraObject
+        class Edge
+        interface Graph{
+            +boolean isEmpty()
+            +boolean isDirected()
+            +int numVertices()
+            +ArrayList<V> vertices()
+            +boolean validVertex(vert)
+            +int key(vert)
+            +V vertex(key)
+            +V vertex(p)
+            +int numEdges()
+            +Graph<V,E> clone()
+        }
+        class KruskalObject
+    }
+    package Participants{
+        class Client
+        class Company{
+            +boolean isHub()
+            +void markAsHub()
+        }
+        class Coordinates
+        class Hub
+        class Location
+        class Participant
+        class Particular
+        class Producer
+    }
+    package Products{
+        class BasketOrder{
+            +boolean isFullySatisfied()
+            +boolean isFulfilled()
+        }
+        class Product{
+            +void dispatch(numberDispatched)
+            +boolean isTimelyAvailable(day)
+            +boolean fillProduct(productFromProducer)
+        }
+    }
+        class DistributionNetwork{
+            +Participant getParticipantByID(participantID)
+            +Graph<Participant, Double> getDistributionNetwork()
+            +void addParticipant(participant)
+            +void addRoute(p1, p2, meters)
+            +Participant participantByLocationId(locationId)
+            +List<Participant> getListOfParticipantsWithFilter(filter)
+            +List<Client> getListOfClients()
+            +boolean getListOfHUB()
+            +boolean isEmpty()
+            +int getNumParticipants()
+            +void clear()
+            +List<String> determineHubs(numberOfHubs)
+            +Map<Participant, DijkstraObject<Participant, Double>> runDijkstra(source)
+            +double calculateDistancesAverage(company)
+            +List<Participant> getcompanies()
+            +int getNumOfCompanies()
+            +boolean containsParticipant(participant)
+            +Map<String, String> findNearestHUB(listOfClients)
+            +List<Producer> getNProducersClosestToClientHub(client, n)
+            +List<Company> getHubs()
+        }
+        class DistributionNetworkData{
+            +void removeAndUpdateProductsSoldOutByProducer(producer, product)
+            +int getNrProdsSoldOut(producer)
+            +boolean areThereNoHubsDefined()
+            +void clearFullData()
+            +void clearProductsRelatedData()
+            +boolean areThereOrdersForDay(day)
+            +boolean areThereNProducersInTheNetwork(n)
+        }
+        class Parcel
+}
+
+
+package Functionalities{
+    class CalculateStatistics{
+        +void calculateStatistics()
+        +boolean producerInBasketOrder(producersId, producer)
+        +void isProductTotallySatisfied(basketOrderStats, product)
+        +void isTotallySatisfied(isTotallySatisfied, clientStats)
+    }
+    class DispatchListGenerator{
+        +List<BasketOrder> generateSimpleDispatchList(orders, day)
+        +List<BasketOrder> generateDispatchListWithRestrictions(orders, day, n)
+        +List<BasketOrder> generateDispatchList(orders, day, isSimpleDispatchList)
+        -boolean fillProductRecursively(product, day, order)
+        -Product getEquivalentProduct(product, day)
+        -List<Product> getProductsForDispatchListWithRestrictions(client, n)
+        -Product getProductXFromSameProducer(producer, productX, day)
+    }
+    class ExpeditionListMinimizedPathGenerator{
+        -List<BasketOrder> getSimpleDispatchList(day)
+        -List<BasketOrder> getRestrictedDispatchList(day)
+        +boolean isDispatchListRequiredValid(day, restrictDispatchList)
+        +void fillWithProducersAndHubs(day, restrictDispatchList)
+        +Map<List<List<DijkstraObjectDTO<Participant, Double>>>, List<Double>> getMinimumDeliveryPathForExpeditionList(startingPointId)
+    }
+    interface IReaderFromFile{
+        +boolean readFromFile(path)
+    }
+    class ParticipantsFileReader{
+        +boolean readFromFile(path)
+    }
+    class ProductsFileReader{
+        +boolean readFromFile(path)
+        +void addOrder(lineElements, productNames)
+        +void addProducts(lineElements, productNames)
+    }
+    class RoutesFileReader{
+        +boolean readFromFile(path)
+    }
+    class WateringPlanReader{
+        +boolean readFromFile(path)
+        -String validateTime(timeStr)
+    }
+}
+
+package Miscellaneous {
+    class AuxiliaryAlgorithms{
+        +V getVertexWithLeastDistance(dijkstraObjectMap, visited)
+        +DijkstraObject<V,E> getVertexWithMostConnections(vOrig, dijkstraObjectMap)
+        +void buildPath(path, dijkstraObjectMap, vDest)
+        +void ascendingSortEdges(kruskalObjectList)
+        +void kruskalAlgorithm(mst, kruskalObjectList, vConnectionMap, vParentMap, listToPrint)
+        +void shortestPathDijkstra(graph, vOrig, visited, dijkstraObjectMap)
+        +List<DijkstraObject<V,E>> shortestPath(graph, vOrig, vDest, zero)
+    }
+    class BasketOrderStatistics{
+        +void calculatePercentageOfSatisfaction()
+    }
+    class ClientStatistics
+    class HubStatistics{
+        +void addProducer(producer)
+        +void addClient(client)
+    }
+    class ProducerStatistics{
+        +void addClient(client)
+        +void addHub(hub)
+    }
+    class WateringParcel
+}
+
+package Stores {
+    class WateringPlanStore{
+        +Map<String, Integer> beingWatered()
+        -boolean currentDay(regularity)
+        -long getremainingTime(startDateTime, currentDateTime)
+        +void clearWateringPlan()
+    }
+}
+
+package UI {
+    class CalculateStatisticsUI
+    class ConnectionNetworkUI
+    class DefineHubsUI
+    class ExpeditionListMinimizedPathUI
+    class FindNearestHubUI
+    class GenerateDispatchListWithRestrictionsUI
+    class GenerateSimpleDispatchListUI
+    class LoadDataFromFilesUI
+    class MainMenuUI
+    class MostDistantPairOfVerticesUI
+    class WateringUI
+}
+
+left to right direction
+
+' UI
+CalculateStatisticsUI ..> CalculateStatisticsController
+ConnectionNetworkUI ..> ConnectionNetworkController
+DefineHubsUI ..> DefineHubsController
+ExpeditionListMinimizedPathUI ..> ExpeditionListMinimizedPathController
+FindNearestHubUI ..> FindNearestHubController
+GenerateDispatchListWithRestrictionsUI ..> GenerateDispatchListController
+GenerateSimpleDispatchListUI ..> GenerateDispatchListController
+LoadDataFromFilesUI ..> LoadDataFromFilesController
+MostDistantPairOfVerticesUI ..> MostDistantPairOfVerticesController
+WateringUI ..> WateringController
+
+' Controllers
+CalculateStatisticsController ..> CalculateStatistics
+CalculateStatisticsController ..> DistributionNetworkData
+ConnectionNetworkController ..> AuxiliaryAlgorithms
+DefineHubsController ..> DistributionNetwork
+ExpeditionListMinimizedPathController ..> ExpeditionListMinimizedPathGenerator
+FindNearestHubController ..> DistributionNetwork
+FindNearestHubController ..> DistributionNetworkData
+GenerateDispatchListController ..> DispatchListGenerator
+GenerateDispatchListController ..> DistributionNetworkData
+LoadDataFromFilesController ..> RoutesFileReader
+LoadDataFromFilesController ..> ProductsFileReader
+LoadDataFromFilesController ..> ParticipantsFileReader
+LoadDataFromFilesController ..> WateringPlanReader
+MostDistantPairOfVerticesController ..> AuxiliaryAlgorithms
+MostDistantPairOfVerticesController ..> DistributionNetwork
+WateringController ..> WateringPlanStore
+
+' Miscellaneous
+AuxiliaryAlgorithms --> DijkstraObject
+AuxiliaryAlgorithms --> KruskalObject
+BasketOrderStatistics --> BasketOrder
+ClientStatistics --> Client
+HubStatistics --> Hub
+ProducerStatistics --> Producer
+WateringParcel --> Parcel
+
+' Readers
+IReaderFromFile --> ParticipantsFileReader
+IReaderFromFile --> ProductsFileReader
+IReaderFromFile --> RoutesFileReader
+IReaderFromFile --> WateringPlanReader
+ParticipantsFileReader --> DistributionNetworkData
+ProductsFileReader --> DistributionNetworkData
+RoutesFileReader -->   DistributionNetworkData
+WateringPlanReader --> WateringPlanStore
+
+' Network
+DistributionNetwork --> DistributionNetworkData
+
+' Domain
+BasketOrder --> Client
+BasketOrder --> Producer
+BasketOrder --> Product
+
+Client --> Hub
+Producer --> Hub
+Product --> Producer
+Product --> Hub
+Product --> Client
+
+DistributionNetwork --> Producer
+DistributionNetwork --> Client
+
+DistributionNetworkData --> Hub
+DistributionNetworkData --> Product
+DistributionNetworkData --> Producer
+DistributionNetworkData --> BasketOrder
+DistributionNetworkData --> Client
+
+
+' Graph
+Graph --> Edge
+Graph --> CommonGraph
+Graph --> MapGraph
+Graph --> MapVertex
+
+' Participants
+Location --> Coordinates
+
+Participant --> Location
+Client --> Location
+Particular --> Location
+Producer --> Location
+Company --> Location
+
+Participant <|-- Client
+Participant <|-- Particular
+Participant <|-- Producer
+Participant <|-- Company
+
+
+
+
+
+
+
+@enduml

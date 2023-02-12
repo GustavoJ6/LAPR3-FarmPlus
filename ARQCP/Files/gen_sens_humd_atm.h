@@ -1,0 +1,1 @@
+unsigned char gen_sens_humd_atm(unsigned char ult_hmd_atm, unsigned char ult_pluvio);

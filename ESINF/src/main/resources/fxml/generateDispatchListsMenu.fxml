@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="329.0" styleClass="body_background" stylesheets="@../SyteSheet/stylesheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Screens.GenerateDispatchListsMenuGUI">
+   <top>
+      <VBox prefHeight="57.0" prefWidth="329.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btBack" mnemonicParsing="false" styleClass="transparent_button">
+               <VBox.margin>
+                  <Insets left="15.0" top="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Back_Button_Arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></VBox>
+   </top>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="90.0" prefWidth="329.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="hBoxBar2" alignment="CENTER" prefHeight="4.0" prefWidth="329.0">
+               <children>
+                  <HBox fx:id="hBoxBar" maxHeight="10.0" maxWidth="1920.0" minHeight="4.0" minWidth="300.0" styleClass="separator_color" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="69.0" prefWidth="329.0">
+               <children>
+                  <HBox fx:id="hBoxLeft" prefHeight="100.0" prefWidth="200.0" />
+                  <Button fx:id="btProfile" mnemonicParsing="false" styleClass="transparent_button">
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/ProfileIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <HBox fx:id="hBoxVert1" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="77.0" prefWidth="3.0" styleClass="separator_color">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <Button fx:id="btHome" mnemonicParsing="false" styleClass="transparent_button">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/HomeIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </Button>
+                  <HBox fx:id="hBoxVert2" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="72.0" prefWidth="4.0" styleClass="separator_color">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <Button fx:id="btSettings" mnemonicParsing="false" styleClass="transparent_button">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/SettingsIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <HBox fx:id="hBoxRight" prefHeight="100.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox fx:id="hBoxBar1" prefHeight="0.0" prefWidth="329.0" />
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox prefHeight="478.0" prefWidth="329.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="145.0" prefWidth="329.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="64.0" prefWidth="329.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="214.0" text="Generate a Dispatch List" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="329.0">
+                     <children>
+                        <ComboBox fx:id="cbTypeOfList" prefHeight="48.0" prefWidth="236.0" promptText="               Type of Dispatch List" styleClass="comboboxC" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="343.0" prefWidth="329.0">
+               <children>
+                  <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="140.0" prefWidth="329.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="329.0">
+                           <children>
+                              <TextField fx:id="txtDayList" prefHeight="36.0" prefWidth="133.0" promptText="Insert the day" styleClass="transparent_textField" visible="false">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="235.0" prefWidth="329.0">
+                     <children>
+                        <VBox prefHeight="253.0" prefWidth="329.0">
+                           <children>
+                              <VBox prefHeight="59.0" prefWidth="329.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="81.0" prefWidth="329.0">
+                                       <children>
+                                          <TextField fx:id="txtNumberOfProducers" prefHeight="44.0" prefWidth="274.0" promptText="Insert the number of producers" styleClass="transparent_textField" visible="false">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="189.0" prefWidth="329.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="59.0" prefWidth="329.0">
+                                       <children>
+                                          <Button fx:id="btGenerateList" mnemonicParsing="false" onAction="#generateBtnListFactory" prefHeight="45.0" prefWidth="83.0" styleClass="load_button" text="Generate" visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="31.0" prefWidth="329.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children></VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

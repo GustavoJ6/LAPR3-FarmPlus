@@ -1,0 +1,1 @@
+int read_frequencies(char *filename, unsigned long *frequencies, int *sensor_amounts);

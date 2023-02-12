@@ -1,0 +1,1 @@
+char gen_sens_temp(char ult_temp, char hour);

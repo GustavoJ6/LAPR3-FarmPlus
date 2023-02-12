@@ -1,0 +1,1 @@
+void exportSensors(Sensor *temperature, Sensor *windSpeed , Sensor *windDir, Sensor *atmHum, Sensor *soilHum, Sensor *pluvio, int sensorAmount[6]);

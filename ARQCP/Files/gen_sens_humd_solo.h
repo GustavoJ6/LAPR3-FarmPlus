@@ -1,0 +1,1 @@
+unsigned char gen_sens_humd_solo(unsigned char ult_hmd_solo, unsigned char ult_pluvio);
